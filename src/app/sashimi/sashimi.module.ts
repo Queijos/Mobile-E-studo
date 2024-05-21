@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CursosPageRoutingModule } from './cursos-routing.module';
+import { SashimiPageRoutingModule } from './sashimi-routing.module';
 
-import { CursosPage } from './CursosPage';
+import { SashimiPage } from './sashimi.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CursosPageRoutingModule
+    SashimiPageRoutingModule
   ],
-  declarations: [CursosPage]
+  declarations: [SashimiPage]
 })
-export class CursosPageModule {}
+export class SashimiPageModule {}

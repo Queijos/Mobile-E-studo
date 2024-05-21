@@ -1,123 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cursos de Culinária</ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content>
-
-<section class="main">
-
-  <ion-img class="recipePhoto"
-  src="https://docs-demo.ionic.io/assets/madison.jpg"
-  alt="The Wisconsin State Capitol building in Madison, WI at night"
-></ion-img>
-
-<div class="descricao">
-  <h1>Descrição</h1>
-  <p>
-    O Hot Philadelphia é um prato típico da culinária japonesa, adaptado ao paladar ocidental. Consiste em um sushi roll empanado e frito, recheado com salmão, cream cheese e, às vezes, cebolinha ou pepino. Geralmente, é servido quente e acompanhado de molhos como o tare ou shoyu.</p>
-</div>
-
-<ion-list class="Ingredientes">
-
-  <ion-item>
-    <ion-label>1 folha de alga Nori</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>1 colher de sopa de cream cheese</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>4 colheres de sopa de farinha de trigo</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>1/4 xícara de água gelada</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>1 esteira de bambu para tekamakis (pode usar um saquinho plástico bem limpinho e seco)</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>3 colheres de sopa de arroz japonês pronto.(procure aqui no site, já enviei essa receita: arroz para sushi)</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>30 gramas de filé de salmão sem pele</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>1 colher de sopa rasa de farinha de rosca</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>1 xícara de água com 1 colher de sobremesa de vinagre (água avinagrada)</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Óleo para fritar</ion-label>
-  </ion-item>
-
-
-</ion-list>
-
-<div class="descricao">
-  <h1>Descrição</h1>
-  <p>
-    O Hot Philadelphia é um prato típico da culinária japonesa, adaptado ao paladar ocidental. Consiste em um sushi roll empanado e frito, recheado com salmão, cream cheese e, às vezes, cebolinha ou pepino. Geralmente, é servido quente e acompanhado de molhos como o tare ou shoyu.</p>
-</div>
-
-
-<ion-list class="preparo">
-
-  <ion-item>
-    <ion-label>Com as mãos bem lavada e secas, molhe-as na água vinagrada o tempo todo para manusear os alimentos nesta receita.</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Umedeça a folha de alga bem rápido na água avinagrada.</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Estique a folha de alga sobre uma esteira de bambu (ou saquinho plástico).</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Coloque o arroz cobrindo a alga, mas deixando uns 3 cm de espaço em cada lado da alga sem arroz.</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Corte o filé de salmão em tiras de 1,5 cm de largura.</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Faça uma linha na horizontal com o salmão, sobre o arroz.</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Faça uma linha com o cream cheese ao lado do salmão.</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>
-      Enrole a alga com o auxilio da esteira (ou saquinho plástico).</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Misture bem, deve virar um creme, se precisar acrescente mais água gelada.</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Envolva todo o empanado com o creme e coloque-o em uma frigideira com o óleo bem quente.</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Depois é só tirar o enrolado e cortar nos tamanhos de tekamakis desejados.</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Uma dica é manter a faca sempre molhada com água avinagrada para cortar melhor.</ion-label>
-  </ion-item>
-
-</ion-list>
-
-</section>
-
+  <ion-list>
+    <ion-item button (click)="openCuisine('Brasileira')">
+      <ion-label>Comida Brasileira</ion-label>
+    </ion-item>
+    <ion-item button (click)="openCuisine('Japonesa')">
+      <ion-label>Comida Japonesa</ion-label>
+    </ion-item>
+    <ion-item button (click)="openCuisine('Portuguesa')">
+      <ion-label>Comida Portuguesa</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

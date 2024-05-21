@@ -39,6 +39,31 @@ const routes: Routes = [
     path: 'perfil',
     loadChildren: () => import('./pagina/perfil/perfil.module').then( m => m.PerfilPageModule)
   },
+  {
+    path: 'curso-japones',
+    loadChildren: () => import('./curso-japones/curso-japones.module').then( m => m.CursoJaponesPageModule)
+  },
+  {
+    path: 'curso-brasileira',
+    loadChildren: () => import('./curso-brasileira/curso-brasileira.module').then( m => m.CursoBrasileiraPageModule)
+  },
+  {
+    path: 'curso-portuguesa',
+    loadChildren: () => import('./curso-portuguesa/curso-portuguesa.module').then( m => m.CursoPortuguesaPageModule)
+  },  {
+    path: 'temaki',
+    loadChildren: () => import('./temaki/temaki.module').then( m => m.TemakiPageModule)
+  },
+  {
+    path: 'hot',
+    loadChildren: () => import('./hot/hot.module').then( m => m.HotPageModule)
+  },
+  {
+    path: 'sashimi',
+    loadChildren: () => import('./sashimi/sashimi.module').then( m => m.SashimiPageModule)
+  },
+
+
 
 
 
