@@ -1,46 +1,44 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>Pagamento</ion-title> 
-    <ion-menu-button slot="end"></ion-menu-button>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/cursos"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Página de Pagamento</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item>
-    <ion-title class="ion-text-center">Pagamento dos Cursos </ion-title>
-  </ion-item>
+  <div class="container">
+    <h2>Pagamento</h2>
+    <form (submit)="processarPagamento($event)">
+      <ion-item>
+        <ion-label position="floating">Selecione o Curso</ion-label>
+        <ion-select placeholder="Escolha um curso">
+          <ion-select-option value="japonesa">Culinária Japonesa</ion-select-option>
+          <ion-select-option value="portuguesa">Culinária Portuguesa</ion-select-option>
+          <ion-select-option value="brasileira">Culinária Brasileira</ion-select-option>
+        </ion-select>
+      </ion-item>
 
-  <ion-item>
-    <div class="input-curso">
-      <ion-label>Selecionar curso:</ion-label>
-      <ion-input label="" label-placement="floating" fill="outline" placeholder="Qual curso você deseja?"></ion-input>
-    </div>
-  </ion-item>
-  <ion-item>
-    <div class="input-nome">
-      <ion-label>Nome no cartão</ion-label>
-      <ion-input label="" label-placement="floating" fill="outline" placeholder="Insira o nome escrito no cartão"></ion-input>
-    </div>
-  </ion-item>
-  <ion-item>
-    <div class="input-numero">
-      <ion-label>Número do cartão</ion-label>
-      <ion-input label="" label-placement="floating" fill="outline" placeholder="Número do Cartão"></ion-input>
-    </div>
-  </ion-item>
-  <ion-item>
-    <div class="input-validade">
-      <ion-label>Data de Validade</ion-label>
-      <ion-input label="" label-placement="floating" fill="outline" placeholder="XX/XX"></ion-input>
-    </div>
-  </ion-item>
-  <ion-item>
-    <div class="input-cvv">
-      <ion-label>CVV</ion-label>
-      <ion-input label="" label-placement="floating" fill="outline" placeholder="CVV"></ion-input>
-    </div>
-  </ion-item>
-  <ion-item>
-    <div class="button-cad">
-      <ion-button size="default" expand="" fill="" id="present-alert" (click)="('homelogado')">Pagar</ion-button>
-      </div>
+      <!-- Campos de pagamento -->
+      <ion-item>
+        <ion-label position="floating">Nome no Cartão</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Número do Cartão</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Data de Validade</ion-label>
+        <ion-input type="text" placeholder="MM/AA" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">CVV</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+      <ion-button expand="block" type="submit">Pagar</ion-button>
+    </form>
+  </div>
+</ion-content>
+ 
