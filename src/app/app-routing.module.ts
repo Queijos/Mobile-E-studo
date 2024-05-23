@@ -62,15 +62,15 @@ const routes: Routes = [
   },
   {
   path: 'feijoada',
-  loadChildren: () => import('./pagina/cursos/curso-brasileira/feijoada/feijoada.module').then( m => m.FeijoadaPageModule)
+  loadChildren: () => import('./pagina/cursos/curso-brasileira/categorias/feijoada/feijoada.module').then( m => m.FeijoadaPageModule)
 },
 {
   path: 'pato',
-  loadChildren: () => import('./pagina/cursos/curso-brasileira/pato/pato.module').then( m => m.PatoPageModule)
+  loadChildren: () => import('./pagina/cursos/curso-brasileira/categorias/pato/pato.module').then( m => m.PatoPageModule)
 },
 {
   path: 'tropeiro',
-  loadChildren: () => import('./pagina/cursos/curso-brasileira/tropeiro/tropeiro.module').then( m => m.TropeiroPageModule)
+  loadChildren: () => import('./pagina/cursos/curso-brasileira/categorias/tropeiro/tropeiro.module').then( m => m.TropeiroPageModule)
 },
 
   

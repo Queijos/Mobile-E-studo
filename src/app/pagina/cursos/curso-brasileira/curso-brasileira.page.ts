@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { InfiniteScrollCustomEvent } from '@ionic/angular';
 @Component({
   selector: 'app-curso-brasileira',
   templateUrl: './curso-brasileira.page.html',
@@ -14,5 +15,5 @@ export class CursoBrasileiraPage implements OnInit {
     }
   ngOnInit() {
   }
-
 }
+
