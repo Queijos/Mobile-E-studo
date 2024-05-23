@@ -60,7 +60,18 @@ const routes: Routes = [
     path: 'sashimi',
     loadChildren: () => import('./pagina/cursos/curso-japones/sashimi/sashimi.module').then( m => m.SashimiPageModule)
   },
- 
+  {
+  path: 'feijoada',
+  loadChildren: () => import('./pagina/cursos/curso-brasileira/feijoada/feijoada.module').then( m => m.FeijoadaPageModule)
+},
+{
+  path: 'pato',
+  loadChildren: () => import('./pagina/cursos/curso-brasileira/pato/pato.module').then( m => m.PatoPageModule)
+},
+{
+  path: 'tropeiro',
+  loadChildren: () => import('./pagina/cursos/curso-brasileira/tropeiro/tropeiro.module').then( m => m.TropeiroPageModule)
+},
 
   
 

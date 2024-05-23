@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: CursoBrasileiraPage
+  },  {
+    path: 'feijoada',
+    loadChildren: () => import('./feijoada/feijoada.module').then( m => m.FeijoadaPageModule)
   }
+
 ];
 
 @NgModule({
