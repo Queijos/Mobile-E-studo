@@ -1,3 +1,6 @@
+*{
+  color:white;
+}
 .container {
     max-width: 600px;
     margin: auto;
@@ -7,20 +10,19 @@
   h2 {
     font-size: 24px;
     font-weight: bold;
-    color: #fff; 
     margin-bottom: 15px;
   }
   
   p {
     font-size: 16px;
-    color: #fff; 
+
     margin-bottom: 20px;
   }
   
   h3 {
     font-size: 20px;
     font-weight: bold;
-    color: #fff; 
+
     margin-top: 30px;
     margin-bottom: 15px;
   }
@@ -32,7 +34,7 @@
   ion-item {
     --border-color: #ccc;
     --highlight-background: #f5f5f5;
-    color: #fff; 
+
   }
   
   ion-item ion-icon {

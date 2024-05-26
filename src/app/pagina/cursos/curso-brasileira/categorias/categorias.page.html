@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>categorias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item button (click)="abrirPagina('tropeiro')">
+      <ion-label>aprenda uma receita de Feijão Tropeiro</ion-label>
+    </ion-item>
+    <ion-item button (click)="abrirPagina('pato')">
+      <ion-label>Uma fácil receita de Pato no Tucupi</ion-label>
+    </ion-item>
+    <ion-item button (click)="abrirPagina('feijoada')">
+      <ion-label>Aqui você aprende uma ótima receita de Feijoada</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

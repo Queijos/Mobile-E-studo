@@ -1,31 +1,25 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="">
-    <ion-menu-button slot="end"></ion-menu-button>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
   <ion-item>
     <ion-title class="ion-text-center">Seja Bem vindo! </ion-title>
   </ion-item>
-
+<form #loginForm="ngForm" (ngSubmit)="login()">
   <ion-item>
     <div class="input-email">
       <ion-label>E-mail</ion-label>
-      <ion-input label="" label-placement="floating" fill="outline" placeholder="Insira seu e-mail"></ion-input>
+      <ion-input type="text" [(ngModel)]="user.email" name="email" label="" label-placement="floating" fill="outline" placeholder="Insira seu e-mail"></ion-input>
     </div>
   </ion-item>
  
   <ion-item>
      <div class="input-senha">
       <ion-label>Senha</ion-label>
-      <ion-input label="" label-placement="floating" fill="outline" placeholder="Insira seu e-mail"></ion-input>
+      <ion-input type="password" [(ngModel)]="user.senha" name="senha" label="" label-placement="floating" fill="outline" placeholder="Insira sua senha"></ion-input>
     </div>
   </ion-item>
 
   <ion-item>
     <div class="button-cad">
-      <ion-button size="default" expand="" fill="" id="present-alert" (click)="abrirPagina('homelogado')">Entrar</ion-button>
+      <ion-button size="default" expand="" fill="" id="present-alert" type="submit">Entrar</ion-button>
       </div>
   </ion-item>
     <ion-item>
@@ -33,4 +27,5 @@
           <ion-button size="default" expand="block" fill="" (click)="abrirPagina('cadastro')">Clique e crie sua conta</ion-button> 
         </div>
     </ion-item>
+  </form>
 </ion-content>

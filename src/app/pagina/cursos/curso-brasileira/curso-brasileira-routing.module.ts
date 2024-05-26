@@ -7,7 +7,16 @@ const routes: Routes = [
   {
     path: '',
     component: CursoBrasileiraPage
+  },
+  {
+    path: 'feijoada',
+    loadChildren: () => import('./categorias/feijoada/feijoada.module').then( m => m.FeijoadaPageModule)
+  },
+  {
+    path: 'categorias',
+    loadChildren: () => import('./categorias/categorias.module').then( m => m.CategoriasPageModule)
   }
+
 ];
 
 @NgModule({

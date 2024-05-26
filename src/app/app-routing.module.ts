@@ -24,10 +24,7 @@ const routes: Routes = [
     path: 'cursos',
     loadChildren: () => import('./pagina/cursos/cursos.module').then( m => m.CursosPageModule)
   },
-  {
-    path: 'homelogado',
-    loadChildren: () => import('./pagina/homelogado/homelogado.module').then( m => m.HomelogadoPageModule)
-  },
+
   {
     path: 'pagamento',
     loadChildren: () => import('./pagina/pagamento/pagamento.module').then( m => m.PagamentoPageModule)
@@ -60,7 +57,27 @@ const routes: Routes = [
     path: 'sashimi',
     loadChildren: () => import('./pagina/cursos/curso-japones/sashimi/sashimi.module').then( m => m.SashimiPageModule)
   },
- 
+  {
+  path: 'feijoada',
+  loadChildren: () => import('./pagina/cursos/curso-brasileira/categorias/feijoada/feijoada.module').then( m => m.FeijoadaPageModule)
+},
+{
+  path: 'pato',
+  loadChildren: () => import('./pagina/cursos/curso-brasileira/categorias/pato/pato.module').then( m => m.PatoPageModule)
+},
+{
+  path: 'tropeiro',
+  loadChildren: () => import('./pagina/cursos/curso-brasileira/categorias/tropeiro/tropeiro.module').then( m => m.TropeiroPageModule)
+},
+  {
+    path: 'clientes',
+    loadChildren: () => import('./pagina/clientes/clientes.module').then( m => m.ClientesPageModule)
+  },
+  {
+    path: 'homelogado',
+    loadChildren: () => import('./pagina/homelogado/homelogado.module').then( m => m.HomelogadoPageModule)
+  },
+
 
   
 

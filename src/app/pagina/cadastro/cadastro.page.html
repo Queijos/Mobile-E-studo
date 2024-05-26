@@ -1,40 +1,51 @@
-<link rel ="stylesheet" heref="cadastro.page.scss">
-<ion-header color="primary">
-  <ion-toolbar color="white">
-    <ion-menu-button slot="end"></ion-menu-button>
-    </ion-toolbar>
-</ion-header>
 
 <ion-content>
+  <form #f="ngForm" (ngSubmit)="enviando(f)">
 <ion-item>
     <ion-title class="ion-text-center">Cadastre-se</ion-title>
 </ion-item>
-      <ion-list>
+      <ion-list class="lista">
 
 <ion-item>
   <div class="input-email">
             <ion-label>Nome</ion-label>
-            <ion-input name="nome" label="" label-placement="floating" fill="outline" placeholder="Insira seu nome"></ion-input>
+            <ion-input ngModel name="nome" label="" label-placement="floating" fill="outline" placeholder="Insira seu nome"></ion-input>
   </div>
           </ion-item>
 <ion-item>
   <div class="input-email">
             <ion-label>E-mail</ion-label>
-            <ion-input name="email" label="" label-placement="floating" fill="outline" placeholder="Insira seu e-mail"></ion-input>
+            <ion-input ngModel name="email" label="" label-placement="floating" fill="outline" placeholder="Insira seu e-mail"></ion-input>
   </div>
           </ion-item>
 
 <ion-item>
-  <div class="input-senha">
+  <div class="input-telefone">
     <ion-label>Telefone/Celular</ion-label>
-            <ion-input name="telefone" label="" label-placement="floating" fill="outline" placeholder="Insira um Telefone/Celular"></ion-input>
+            <ion-input ngModel name="telefone" label="" type="number" label-placement="floating" fill="outline" placeholder="Insira um Telefone/Celular"></ion-input>
+  </div>
+</ion-item>
+<ion-item>
+  <div class="input-data_nascimento">
+    <ion-label>Data de Nascimento</ion-label>
+            <ion-input ngModel name="data_nasc" type="date" label="" label-placement="floating" fill="outline" placeholder=""></ion-input>
+  </div>
+</ion-item>
+<ion-item>
+  <div class="input-genero">
+    <ion-label>Genero</ion-label>
+    <ion-select ngModel name="genero" label-placemente="floating" fill="outline">
+      <ion-select-option>Masculino</ion-select-option>
+      <ion-select-option>Feminino</ion-select-option>
+      <ion-select-option>Outro</ion-select-option>
+    </ion-select>
   </div>
 </ion-item>
 
 <ion-item>
   <div class="input-senha">
     <ion-label>Senha</ion-label>
-            <ion-input name="senha" label="" label-placement="floating" fill="outline" placeholder="Insira sua senha"></ion-input>
+            <ion-input ngModel name="senha" label="" label-placement="floating" fill="outline" placeholder="Insira sua senha"></ion-input>
   </div>
 </ion-item>
 
@@ -44,7 +55,7 @@
 
 <ion-item>
   <div class="button-cad">
-           <ion-button size="default" expand="" fill="" id="present-alert" (click)="abrirPagina('home')">Cadastrar</ion-button>
+           <ion-button size="default" expand="" fill="" id="present-alert" type="submit">Cadastrar</ion-button>
         
             <ion-alert
              trigger="present-alert"
@@ -61,6 +72,6 @@
   
                 
   </ion-list>
-  
+  </form>
 </ion-content>
 

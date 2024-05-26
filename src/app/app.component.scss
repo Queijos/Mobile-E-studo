@@ -13,7 +13,7 @@
   font-size: 30px;
 }
 
-ion-label {
+.label-title {
   margin:5px;
   padding:10px;
   height: 40px;
@@ -24,7 +24,7 @@ ion-label {
 
 
 
-/*ion-menu ion-content {
+ion-menu ion-content {
   --background: var(--ion-item-background, var(--ion-background-color, #fff));
 
 }
@@ -145,4 +145,4 @@ ion-note {
 
 ion-item.selected {
   --color: var(--ion-color-primary);
-}*/
+}
