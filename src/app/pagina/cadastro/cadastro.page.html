@@ -1,56 +1,40 @@
 
 <ion-content>
-<ion-item>
-    <ion-title class="ion-text-center">Cadastre-se</ion-title>
+<ion-item class="text">
+    <ion-text >Cadastre-se</ion-text>
 </ion-item>
       <ion-list>
 
-<ion-item>
-  <div class="input-email">
-            <ion-label>Nome</ion-label>
-            <ion-input name="nome" label="" label-placement="floating" fill="outline" placeholder="Insira seu nome"></ion-input>
-  </div>
-          </ion-item>
-<ion-item>
-  <div class="input-email">
-            <ion-label>E-mail</ion-label>
-            <ion-input name="email" label="" label-placement="floating" fill="outline" placeholder="Insira seu e-mail"></ion-input>
-  </div>
+<ion-item class="input-nome">
+            <ion-input name="nome" label="Nome" label-placement="floating" fill="outline" placeholder="Insira seu nome"></ion-input>
           </ion-item>
 
-<ion-item>
-  <div class="input-senha">
-    <ion-label>Telefone/Celular</ion-label>
-            <ion-input name="telefone" label="" label-placement="floating" fill="outline" placeholder="Insira um Telefone/Celular"></ion-input>
-  </div>
+<ion-item class="input-email">
+            <ion-input name="email" label="E-mail" label-placement="floating" fill="outline" placeholder="Insira seu e-mail"></ion-input>
+          </ion-item>
+
+<ion-item class="input-telefone">
+            <ion-input name="telefone" label="Telefone/Celular" label-placement="floating" fill="outline" placeholder="Insira um Telefone/Celular"></ion-input>
 </ion-item>
 
-<ion-item>
-  <div class="input-senha">
-    <ion-label>Senha</ion-label>
-            <ion-input name="senha" label="" label-placement="floating" fill="outline" placeholder="Insira sua senha"></ion-input>
-  </div>
+<ion-item class="input-senha">
+            <ion-input name="senha" label="Senha" label-placement="floating" fill="outline" placeholder="Insira sua senha"></ion-input>
 </ion-item>
 
-<ion-item>
-  <ion-checkbox>Eu concordo com os termos e condições de usúario</ion-checkbox> 
-</ion-item>
 
-<ion-item>
-  <div class="button-cad">
+<ion-item class="button-cadastrar">
            <ion-button size="default" expand="" fill="" id="present-alert" (click)="abrirPagina('home')">Cadastrar</ion-button>
-        
             <ion-alert
              trigger="present-alert"
                  header="Cadastro Concluido"
                 message="Cadastro finalizado com sucesso."
               [buttons]="alertButtons">
-            </ion-alert>   </div>
+            </ion-alert> 
 </ion-item> 
-<ion-item>
-  <div class="button-entrar">
-    <p>Já possui uma conta? </p>
-      <ion-button size="default" expand="block" fill="" (click)="abrirPagina('login')">Entrar</ion-button> </div>
+
+<ion-item class="button-login">    
+  <p>Já possui uma conta? </p>
+      <ion-button size="default" expand="block" fill="" (click)="abrirPagina('login')">Entrar</ion-button> 
 </ion-item>
   
                 
