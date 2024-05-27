@@ -10,12 +10,9 @@ const routes: Routes = [
   },
   {
     path: 'feijoada',
-    loadChildren: () => import('./categorias/feijoada/feijoada.module').then( m => m.FeijoadaPageModule)
+    loadChildren: () => import('./feijoada/feijoada.module').then( m => m.FeijoadaPageModule)
   },
-  {
-    path: 'categorias',
-    loadChildren: () => import('./categorias/categorias.module').then( m => m.CategoriasPageModule)
-  }
+
 
 ];
 

@@ -1,21 +1,58 @@
 <ion-content>
   <ion-item class="topo">
-<ion-text class="title"><b>Cooking</b></ion-text>
-    <ion-button color="danger" class="botao-entrar" shape="round" (click)="abrirPagina('login')">entrar</ion-button>
+<ion-text class="title">Olá!<br>
+                      <b>Pessoa</b></ion-text>
+    <ion-button color="danger" class="botao-entrar" shape="round" (click)="abrirPagina('login')">Entrar</ion-button>
     <ion-button color="danger" class="botao-cadastrar" shape="round" (click)="abrirPagina('cadastro')">Cadastrar</ion-button>
   </ion-item>
 
-<ion-item>
+   
+    <ion-header class="search-filter">
+      <ion-toolbar class="toolbar1"> 
+        <ion-searchbar class="busca" placeholder="Busque receitas"></ion-searchbar>
+          <ion-icon class="button-filter" id="open-custom-dialog" name="filter-outline"></ion-icon>
+        </ion-toolbar>
+    </ion-header>
 
+      <ion-modal id="example-modal" #modal trigger="open-custom-dialog">
+        <ng-template>
+          <div class="wrapper">
+            <h1>Categorias</h1>
+            <ion-list lines="none">
+              <ion-item button="true" detail="false" (click)="modal.dismiss()">
+                <ion-icon name="fast-food-outline"></ion-icon>
+                <ion-label>Geral</ion-label>
+              </ion-item>
+
+              <ion-item button="true" detail="false" (click)="modal.dismiss()">
+                <ion-icon name="cafe-outline"></ion-icon>
+                <ion-label>Café da manhã</ion-label>
+              </ion-item>
+
+              <ion-item button="true" detail="false" (click)="modal.dismiss()">
+                <ion-icon name="pizza-outline"></ion-icon>
+                <ion-label>Refeição</ion-label>
+              </ion-item>
+
+              <ion-item button="true" detail="false" (click)="modal.dismiss()">
+                <ion-icon name="ice-cream-outline"></ion-icon>
+                <ion-label>Sobremesa</ion-label>
+              </ion-item>
+            </ion-list>
+          </div>
+        </ng-template>
+      </ion-modal>
+
+    <ion-item>
   <ion-card>
     <ion-card-header>
       <ion-card-title class="ion-text-center"><b>AprendeAqui</b></ion-card-title>
         <ion-card-subtitle class="ion-text-center">Sua porta de entrada para o universo da Culinária!</ion-card-subtitle>
-    
        </ion-card-header>
         <img alt="Silhouette of mountains" src="https://png.pngtree.com/background/20230517/original/pngtree-person-cooking-at-the-kitchen-counter-picture-image_2625819.jpg" />
     </ion-card>
 </ion-item>
+
 <p></p>
 <ion-item>
   <ion-text class="ion-text-center">
@@ -23,7 +60,7 @@
   </ion-text>
 </ion-item>
 <ion-item>
-  <div class="butao">
+  <div class="botao">
   <ion-avatar>
     <img (click)="abrirPagina('hot')" alt="Silhouette of mountains" src="https://static.itdg.com.br/images/1200-630/a92eeb4c33ecd055c881dc20c806e625/hot-filadelfia-como-fazer.jpg" />
   </ion-avatar>
@@ -80,7 +117,6 @@
 
 
 <ion-tab-bar class="barra-bottom" color="danger" slot="bottom">
- 
 
     <ion-tab-button class="barra-botoes" color="primary"(click)="abrirPagina('cursos')"tab="Cursos">
       <ion-icon class="icon" name="fast-food"></ion-icon>
@@ -92,3 +128,7 @@
       Pesquisar
     </ion-tab-button>
   </ion-tab-bar>
+
+
+
+
