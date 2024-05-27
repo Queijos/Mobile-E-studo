@@ -7,28 +7,42 @@
     height: 40px;
     width: 100px;
     margin-bottom: 20px;
- 
-    
+    font-size: 18px;
 }
 .botao-cadastrar{
     height: 40px;
     width: 100px;
     margin-bottom: 20px;
-   
+    font-size: 18px;
 }
 .title{
-    margin-right: 20px;
+    margin-right: 40px;
     margin-bottom: 20px;
- 
 }
+.title b{
+    font-size: 30px;
+}
+
 .barra-bottom .barra-botoes{
     color:white;
     margin-bottom:20px;
-  
 }
-
-
-.butao{
+.barra-bottom{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.busca{
+width: 85%;
+}
+.button-filter{
+    position: absolute;
+    display: flex;
+    top:0;
+    left: 85%;
+    height: 35px;
+    width: 35px;
+}
+.botao{
     display: flex;
     height: 100px;
 
