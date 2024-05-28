@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UrlTree } from '@angular/router';
-import { ModalController, NavController } from '@ionic/angular';
-import { Cliente, ClienteService } from 'src/app/servico/cliente.service';
+import { NavController } from '@ionic/angular';
+import { ClienteService } from 'src/app/servico/cliente.service';
 
 @Component({
   selector: 'app-login',
@@ -9,34 +8,30 @@ import { Cliente, ClienteService } from 'src/app/servico/cliente.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  user: Cliente = {
-    email: '',
-    senha: '',
-    id: '',
-    nome: '',
-    telefone: '',
-    data_nasc: '',
-    genero: ''
-  };
+  email: string = '';
+  senha: string = '';
 
-  constructor(public nav: NavController,private modalCtrl: ModalController, private clienteService: ClienteService
-  ) {}
+  constructor(public nav: NavController, private clienteService: ClienteService) {}
 
-ngOnInit() {}
+  ngOnInit() {}
 
-abrirPagina(x: any){
-        this.nav.navigateForward(x);
-}
-login() {
-  this.clienteService.login(this.user).subscribe((response) =>{
-    if(response){
-      //login bem-sucedido
-      this.abrirPagina('homelogado');
-    }else{
-      //falha no login
-    }
-  })
-}
-      
-  
+  abrirPagina(x: any) {
+    this.nav.navigateForward(x);
   }
+
+  login() {
+    this.clienteService.login(this.email, this.senha).subscribe((response) => {
+      if (response.success) {
+        // login bem-sucedido
+        this.abrirPagina('homelogado');
+      } else {
+        // falha no login, mostrar mensagem de erro
+        alert('Email ou senha incorretos. Tente novamente.');
+      }
+    }, (error) => {
+      // lidar com erros de rede ou outros erros inesperados
+      console.error('Erro ao tentar fazer login', error);
+      alert('Ocorreu um erro. Tente novamente mais tarde.');
+    });
+  }
+}

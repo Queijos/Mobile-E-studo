@@ -1,24 +1,47 @@
-ion-title{
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Abel";
+    box-sizing: border-box;
+}
+.text{
     font-size: 25px;
-    margin: 35px;
-    margin-left: 0px;
+    margin-top: 30px;
+    margin: 20px;
+    margin-bottom: 30px;
 }
 ion-menu-button{
     margin-right:290px;
 }
 .input-email{
-    margin:15px;
-    margin-left:50px;
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid white;
+    margin-bottom: 30px;
 }
 .input-senha{
-    margin: 15px;
-    margin-left:50px;
-}
-.button-cad{
-    margin-top: 100px;
-    margin-left:101px;
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid white;
+    
 }
 .button-entrar{
+    text-align: center;
+    border: 1px solid white;
+    width: 100px;
+    margin:20px;
     margin-top: 50px;
-    margin-left:40px;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.button-criar{
+    margin:10px;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button-criar p{
+    margin-left: 40px;
 }

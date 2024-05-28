@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import  {IonItem} from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +15,12 @@ export class HomePage implements OnInit {
 
     }
   ngOnInit() {
+    const list: NodeListOf<Element> = document.querySelectorAll('.list');
+    function activeLink(this: Element): void {
+      list.forEach((item) => item.classList.remove('active'));
+      this.classList.add('active');
+    }
+    list.forEach((item)=> item.addEventListener('click',activeLink));
   }
 
 }

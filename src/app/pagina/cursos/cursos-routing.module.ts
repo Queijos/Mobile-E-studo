@@ -7,6 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: CursosPage
+  },
+
+  {
+    path: 'sobremesa',
+    loadChildren: () => import('./sobremesa/sobremesa.module').then( m => m.SobremesaPageModule)
   }
 ];
 

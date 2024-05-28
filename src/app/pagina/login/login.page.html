@@ -1,31 +1,20 @@
 <ion-content>
-  <ion-item>
-    <ion-title class="ion-text-center">Seja Bem vindo! </ion-title>
+  <ion-item class="text">
+    <ion-text>Seja Bem vindo!</ion-text>
   </ion-item>
-<form #loginForm="ngForm" (ngSubmit)="login()">
-  <ion-item>
-    <div class="input-email">
-      <ion-label>E-mail</ion-label>
-      <ion-input type="text" [(ngModel)]="user.email" name="email" label="" label-placement="floating" fill="outline" placeholder="Insira seu e-mail"></ion-input>
-    </div>
-  </ion-item>
- 
-  <ion-item>
-     <div class="input-senha">
-      <ion-label>Senha</ion-label>
-      <ion-input type="password" [(ngModel)]="user.senha" name="senha" label="" label-placement="floating" fill="outline" placeholder="Insira sua senha"></ion-input>
-    </div>
-  </ion-item>
-
-  <ion-item>
-    <div class="button-cad">
+  <form #loginForm="ngForm" (ngSubmit)="login()">
+    <ion-item class="input-email">
+      <ion-input type="text" [(ngModel)]="email" name="email" label-placement="floating" fill="outline" placeholder="Insira seu e-mail"></ion-input>
+    </ion-item>
+    <ion-item class="input-senha">
+      <ion-input [(ngModel)]="senha" name="senha" type="password" label-placement="floating" fill="outline" placeholder="Insira sua senha"></ion-input>
+    </ion-item>
+    <ion-item class="button-entrar">
       <ion-button size="default" expand="" fill="" id="present-alert" type="submit">Entrar</ion-button>
-      </div>
-  </ion-item>
-    <ion-item>
-      <div class="button-entrar">
-          <ion-button size="default" expand="block" fill="" (click)="abrirPagina('cadastro')">Clique e crie sua conta</ion-button> 
-        </div>
+    </ion-item>
+    <ion-item class="button-criar">
+      <p>Não possui uma conta?</p>
+      <ion-button size="default" expand="block" fill="" (click)="abrirPagina('cadastro')">Criar Conta</ion-button>
     </ion-item>
   </form>
 </ion-content>

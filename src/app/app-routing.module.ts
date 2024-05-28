@@ -24,7 +24,10 @@ const routes: Routes = [
     path: 'cursos',
     loadChildren: () => import('./pagina/cursos/cursos.module').then( m => m.CursosPageModule)
   },
-
+  {
+    path: 'homelogado',
+    loadChildren: () => import('./pagina/homelogado/homelogado.module').then( m => m.HomelogadoPageModule)
+  },
   {
     path: 'pagamento',
     loadChildren: () => import('./pagina/pagamento/pagamento.module').then( m => m.PagamentoPageModule)
@@ -42,10 +45,6 @@ const routes: Routes = [
     loadChildren: () => import('./pagina/cursos/curso-brasileira/curso-brasileira.module').then( m => m.CursoBrasileiraPageModule)
   },
   {
-    path: 'curso-portuguesa',
-    loadChildren: () => import('./pagina/cursos/curso-portuguesa/curso-portuguesa.module').then( m => m.CursoPortuguesaPageModule)
-  },
-  {
     path: 'temaki',
     loadChildren: () => import('./pagina/cursos/curso-japones/temaki/temaki.module').then( m => m.TemakiPageModule)
   },
@@ -59,25 +58,16 @@ const routes: Routes = [
   },
   {
   path: 'feijoada',
-  loadChildren: () => import('./pagina/cursos/curso-brasileira/categorias/feijoada/feijoada.module').then( m => m.FeijoadaPageModule)
+  loadChildren: () => import('./pagina/cursos/curso-brasileira/feijoada/feijoada.module').then( m => m.FeijoadaPageModule)
 },
 {
   path: 'pato',
-  loadChildren: () => import('./pagina/cursos/curso-brasileira/categorias/pato/pato.module').then( m => m.PatoPageModule)
+  loadChildren: () => import('./pagina/cursos/curso-brasileira/pato/pato.module').then( m => m.PatoPageModule)
 },
 {
   path: 'tropeiro',
-  loadChildren: () => import('./pagina/cursos/curso-brasileira/categorias/tropeiro/tropeiro.module').then( m => m.TropeiroPageModule)
+  loadChildren: () => import('./pagina/cursos/curso-brasileira/tropeiro/tropeiro.module').then( m => m.TropeiroPageModule)
 },
-  {
-    path: 'clientes',
-    loadChildren: () => import('./pagina/clientes/clientes.module').then( m => m.ClientesPageModule)
-  },
-  {
-    path: 'homelogado',
-    loadChildren: () => import('./pagina/homelogado/homelogado.module').then( m => m.HomelogadoPageModule)
-  },
-
 
   
 

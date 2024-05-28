@@ -7,31 +7,60 @@
     height: 40px;
     width: 100px;
     margin-bottom: 20px;
- 
-    
+    font-size: 18px;
 }
 .botao-cadastrar{
     height: 40px;
     width: 100px;
     margin-bottom: 20px;
-   
+    font-size: 18px;
 }
 .title{
-    margin-right: 20px;
+    margin-right: 40px;
     margin-bottom: 20px;
- 
 }
+.title b{
+    font-size: 30px;
+}
+
 .barra-bottom .barra-botoes{
     color:white;
     margin-bottom:20px;
-  
 }
-
-.butao{
+.barra-bottom{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.busca{
+width: 85%;
+}
+.button-filter{
+    position: absolute;
     display: flex;
-    height: 100px;
-
+    top:0;
+    left: 85%;
+    height: 35px;
+    width: 35px;
 }
+
 .icon{
     color: white;
 }
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 18px;
+  margin-bottom: 40px;
+}
+  .clickable {
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .clickable:active {
+    transform: scale(0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .h1categoria {
+    text-align: center;
+  }

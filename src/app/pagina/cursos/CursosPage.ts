@@ -7,12 +7,17 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./cursos.page.scss'],
 })
 export class CursosPage implements OnInit {
-  constructor(private navCtrl: NavController) {}
+  constructor(public nav: NavController, private navCtrl: NavController) {}
 
   ngOnInit() {
   }
-
+ abrirPagina(x: any) {
+    this.nav.navigateForward(x);
+  }
   openCuisine(cuisine: string) {
+  
+
+ 
     if (cuisine === 'Brasileira') {
       this.navCtrl.navigateForward('/curso-brasileira');
     } else if (cuisine === 'Japonesa') {
