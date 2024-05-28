@@ -7,7 +7,19 @@ const routes: Routes = [
   {
     path: '',
     component: SobremesaPage
+  },  {
+    path: 'cookies',
+    loadChildren: () => import('./cookies/cookies.module').then( m => m.CookiesPageModule)
+  },
+  {
+    path: 'sorvete',
+    loadChildren: () => import('./sorvete/sorvete.module').then( m => m.SorvetePageModule)
+  },
+  {
+    path: 'pudim',
+    loadChildren: () => import('./pudim/pudim.module').then( m => m.PudimPageModule)
   }
+
 ];
 
 @NgModule({

@@ -1,29 +1,62 @@
 <ion-header>
   <ion-toolbar color="danger" class="tab-top">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
-    <ion-title>Cursos de Culinária</ion-title>
+    <ion-title class="title">Cursos de Culinária</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
 
-  <ion-list >
+  <ion-item class="title">Comidas Brasileira</ion-item>
+  <div class="img-container">
+<ion-item (click)="abrirPagina('feijoada')">
+    <ion-avatar><ion-img class="imgbrasileira" src="/assets/feijoada-1.jpg"></ion-img></ion-avatar>
+    <p><ion-text class="text">Feijoada</ion-text></p></ion-item>
+   <ion-item (click)="abrirPagina('pato')"><ion-avatar><ion-img class="imgbrasileira" src="/assets/patorecheado.jpg"></ion-img></ion-avatar> 
+    <ion-text class="text">Pato</ion-text> </ion-item>
+  <ion-item (click)="abrirPagina('tropeiro')"> <ion-avatar><ion-img class="imgbrasileira" src="/assets/feijão-tropeiro.jpg"></ion-img></ion-avatar>
+     <ion-text class="text">Topeiro</ion-text> </ion-item>
+    </div>
+
     <ion-item class="item1">
     <ion-label (click)="openCuisine('Brasileira')">Culinária Brasileira
       </ion-label>
     </ion-item>
 
+    <ion-item class="title">Comidas Japonesa</ion-item>
+    <div class="img-container">
+  <ion-item>
+      <ion-avatar (click)="abrirPagina('sashimi')"><ion-img class="imgbrasileira" src="https://receitinhas.com.br/wp-content/uploads/2018/12/iStock-623858612-1200x800.jpg"></ion-img></ion-avatar>
+      <p><ion-text class="text">Sashimi</ion-text></p></ion-item>
+     <ion-item (click)="abrirPagina('temaki')"> <ion-avatar><ion-img class="imgbrasileira" src="https://static.itdg.com.br/images/auto-auto/e37b23841dfbf1e65819f1e5076b5fdf/temaki-salmao.jpg"></ion-img></ion-avatar> 
+      <ion-text class="text">Temaki</ion-text> </ion-item>
+    <ion-item (click)="abrirPagina('hot')"> <ion-avatar><ion-img class="imgbrasileira" src="https://static.itdg.com.br/images/1200-630/a92eeb4c33ecd055c881dc20c806e625/hot-filadelfia-como-fazer.jpg"></ion-img></ion-avatar> 
+      <ion-text class="text">Hot</ion-text> </ion-item>
+      </div>
     <ion-item class="item2">
         <ion-label (click)="openCuisine('Japonesa')">Culinária Japonesa
         </ion-label>
       </ion-item>
 
+      <ion-item class="title">Sobremesas</ion-item>
+      <div class="img-container">
+
+    <ion-item (click)="abrirPagina('sobremesa/cookies')">
+        <ion-avatar><ion-img class="imgbrasileira" src="/assets/cookies.jpg"></ion-img></ion-avatar>
+        <p><ion-text class="text">Cookie</ion-text></p></ion-item>
+
+       <ion-item (click)="abrirPagina('sorvete')"><ion-avatar><ion-img class="imgbrasileira" src="/assets/sorvete.jpg"></ion-img></ion-avatar> 
+        <ion-text class="text">Sorvete</ion-text> </ion-item>
+
+      <ion-item (click)="abrirPagina('pudim')"> <ion-avatar><ion-img class="imgbrasileira" src="/assets/pudim.jpg"></ion-img></ion-avatar> 
+        <ion-text class="text">Pudim</ion-text> </ion-item>
+
+        </div>
       <ion-item class="item3">
         <ion-label (click)="abrirPagina('/cursos/sobremesa')">Sobremesas
         </ion-label>
       </ion-item>
-    </ion-list>
+ 
 
     
 
