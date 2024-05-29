@@ -66,6 +66,10 @@ const routes: Routes = [
   loadChildren: () => import('./pagina/cursos/curso-brasileira/tropeiro/tropeiro.module').then( m => m.TropeiroPageModule)
 },
   {
+  path: 'sobremesa',
+  loadChildren: () => import('./pagina/cursos/sobremesa/sobremesa.module').then( m => m.SobremesaPageModule)
+  },
+  {
     path: 'cookies',
     loadChildren: () => import('./pagina/cursos/sobremesa/cookies/cookies.module').then( m => m.CookiesPageModule)
   },
@@ -81,6 +85,8 @@ const routes: Routes = [
     path: 'strogonoff',
     loadChildren: () => import('./pagina/cursos/curso-brasileira/strogonoff/strogonoff.module').then( m => m.StrogonoffPageModule)
   },
+  
+
 
   
 
