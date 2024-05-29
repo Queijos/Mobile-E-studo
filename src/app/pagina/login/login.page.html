@@ -4,10 +4,10 @@
   </ion-item>
   <form #loginForm="ngForm" (ngSubmit)="login()">
     <ion-item class="input-email">
-      <ion-input type="text" [(ngModel)]="email" name="email" label-placement="floating" fill="outline" placeholder="Insira seu e-mail"></ion-input>
+      <ion-input label="E-mail" type="text" [(ngModel)]="email" name="email" label-placement="floating" fill="outline" placeholder="Insira seu e-mail"></ion-input>
     </ion-item>
     <ion-item class="input-senha">
-      <ion-input [(ngModel)]="senha" name="senha" type="password" label-placement="floating" fill="outline" placeholder="Insira sua senha"></ion-input>
+      <ion-input label="Senha" [(ngModel)]="senha" name="senha" type="password" label-placement="floating" fill="outline" placeholder="Insira sua senha"></ion-input>
     </ion-item>
     <ion-item class="button-entrar">
       <ion-button size="default" expand="" fill="" id="present-alert" type="submit">Entrar</ion-button>
