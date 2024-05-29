@@ -60,14 +60,27 @@ const routes: Routes = [
   path: 'feijoada',
   loadChildren: () => import('./pagina/cursos/curso-brasileira/feijoada/feijoada.module').then( m => m.FeijoadaPageModule)
 },
-{
-  path: 'pato',
-  loadChildren: () => import('./pagina/cursos/curso-brasileira/pato/pato.module').then( m => m.PatoPageModule)
-},
+
 {
   path: 'tropeiro',
   loadChildren: () => import('./pagina/cursos/curso-brasileira/tropeiro/tropeiro.module').then( m => m.TropeiroPageModule)
 },
+  {
+    path: 'cookies',
+    loadChildren: () => import('./pagina/cursos/sobremesa/cookies/cookies.module').then( m => m.CookiesPageModule)
+  },
+  {
+    path: 'pudim',
+    loadChildren: () => import('./pagina/cursos/sobremesa/pudim/pudim.module').then( m => m.PudimPageModule)
+  },
+  {
+    path: 'brigadeiro',
+    loadChildren: () => import('./pagina/cursos/sobremesa/brigadeiro/brigadeiro.module').then( m => m.BrigadeiroPageModule)
+  },
+  {
+    path: 'strogonoff',
+    loadChildren: () => import('./pagina/cursos/curso-brasileira/strogonoff/strogonoff.module').then( m => m.StrogonoffPageModule)
+  },
 
   
 

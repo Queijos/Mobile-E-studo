@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PatoPageRoutingModule } from './pato-routing.module';
+import { BrigadeiroPageRoutingModule } from './brigadeiro-routing.module';
 
-import { PatoPage } from './pato.page';
+import { BrigadeiroPage } from './brigadeiro.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PatoPageRoutingModule
+    BrigadeiroPageRoutingModule
   ],
-  declarations: [PatoPage]
+  declarations: [BrigadeiroPage]
 })
-export class PatoPageModule {}
+export class BrigadeiroPageModule {}

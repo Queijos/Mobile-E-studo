@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SorvetePageRoutingModule } from './sorvete-routing.module';
+import { StrogonoffPageRoutingModule } from './strogonoff-routing.module';
 
-import { SorvetePage } from './sorvete.page';
+import { StrogonoffPage } from './strogonoff.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SorvetePageRoutingModule
+    StrogonoffPageRoutingModule
   ],
-  declarations: [SorvetePage]
+  declarations: [StrogonoffPage]
 })
-export class SorvetePageModule {}
+export class StrogonoffPageModule {}

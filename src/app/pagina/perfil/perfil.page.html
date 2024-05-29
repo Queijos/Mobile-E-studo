@@ -1,19 +1,20 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-    </ion-buttons>
-    <ion-title>Perfil do Usuário</ion-title>
+  <ion-toolbar color="danger">
+    <ion-title class="text">Perfil do Usuário</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
+
+<div class="img-container">
   <ion-item>
-    <ion-avatar slot="start">
+    <ion-avatar class="img-user">
       <ion-img src="/assets/ratatonho.jpg"></ion-img>
-    </ion-avatar>
-    <ion-label>
- 
-    </ion-label>
+    </ion-avatar> 
   </ion-item>
+</div>
+
+<ion-item class="username">Nome</ion-item>
+
   <ion-item>
     <ion-label>Email:</ion-label>
   </ion-item>
@@ -26,7 +27,7 @@
   <ion-item>
     <ion-label>Gênero: </ion-label>
   </ion-item>
-</ion-content>
+
 
    <ion-item>
     <ion-label>Receber Notificações</ion-label>
@@ -38,17 +39,19 @@
   </ion-item>
 
   <ion-item>
-    <ion-avatar slot="start"><ion-img src="https://d1bvpoagx8hqbg.cloudfront.net/originals/lasanha-tradicional-sobremesa-saudavel-a0f0f5b24a37be2487e4da0b9f17e3bf.jpg"></ion-img></ion-avatar>
+    <ion-avatar slot="start"><ion-img src="assets/brigadeiro.jpg"></ion-img></ion-avatar>
     <ion-icon name="star" slot="end"></ion-icon>
-    <ion-label>Lasanha</ion-label>
+    <ion-label>Brigadeiro</ion-label>
       </ion-item>
       <ion-item>
-        <ion-avatar slot="start"><ion-img src="https://www.minhareceita.com.br/app/uploads/2021/02/fricasse_de_camarao-02.jpg"></ion-img></ion-avatar>
+        <ion-avatar slot="start"><ion-img src="assets/strogonoff.jpg"></ion-img></ion-avatar>
         <ion-icon name="star" slot="end"></ion-icon>
-        <ion-label>Fricasse de camarão</ion-label>
+        <ion-label>Strogonoff</ion-label>
           </ion-item>
           <ion-item>
             <ion-avatar slot="start"><ion-img src="https://www.guiadasemana.com.br/contentFiles/image/2021/05/FEA/67190_shutterstock-781203586.jpg"></ion-img></ion-avatar>
             <ion-icon name="star" slot="end"></ion-icon>
             <ion-label>Pudim</ion-label>
               </ion-item>
+            
+            </ion-content>
