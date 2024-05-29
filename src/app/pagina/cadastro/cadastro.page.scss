@@ -1,42 +1,76 @@
-ion-title{
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Abel";
+    box-sizing: border-box;
+}
+.text{
     font-size: 25px;
-    margin: 35px;
-    margin-left: 0px;
-}
-.lista{
-    font-size: 1px
-}
-.input-email{
-    margin: 15px;
-    margin-left:50px;
-}
-.input-senha{
-    margin: 15px;
-    margin-left:50px;
-}
-.input-genero{
-    margin: 15px;
-    margin-left:50px;
-}
-.input-telefone{
-    margin: 15px;
-    margin-left:50px;
-}
-.input-data_nascimento{
-    margin: 15px;
-    margin-left:50px;
-}
-.input-conf-senha{
-    margin: 15px;
-    margin-left:50px;
-}
-.button-cad{
-    margin-left:101px;
-}
-.button-entrar{
-    margin-top:50px;
-    margin-left:85px;
+    margin-top: 30px;
+    margin: 20px;
+    margin-bottom: 30px;
 }
 ion-menu-button{
-    margin-right: 290px;
+    margin-right:290px;
+}
+.input-nome{
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid white;
+    margin-bottom: 30px;
+}
+.input-email{
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid white;
+    margin-bottom: 30px;
+}
+.input-telefone{
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid white;
+    margin-bottom: 30px;
+}
+.input-data-nascimento{
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid white;
+    margin-bottom: 30px;
+}
+.input-genero{
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid white;
+    margin-bottom: 30px;
+
+}
+.input-genero ion-label{
+    margin-right: 70px;
+}
+.input-senha{
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid white;
+    margin-bottom: 30px;
+    
+}
+.button-cad{
+    text-align: center;
+    border: 1px solid white;
+    width: 100px;
+    margin:20px;
+    margin-top: 50px;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.button-entrar{
+    margin:10px;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button-criar p{
+    margin-left: 40px;
 }
