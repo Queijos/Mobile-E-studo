@@ -1,7 +1,6 @@
-import { CommonModule } from '@angular/common';
-import { Component, NgModule, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
+import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import  {IonItem} from '@ionic/angular';
 
 @Component({
   selector: 'app-sobremesa',
@@ -10,18 +9,12 @@ import { IonicModule } from '@ionic/angular';
 })
 export class SobremesaPage implements OnInit {
 
-  constructor() { }
+  constructor(public nav: NavController) {} 
+    abrirPagina(x: any){
+      this.nav.navigateForward(x);
 
+    }
   ngOnInit() {
   }
 
 }
-@NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
- 
-  ],
-})
-export class ListingPageRoutingModule {}
