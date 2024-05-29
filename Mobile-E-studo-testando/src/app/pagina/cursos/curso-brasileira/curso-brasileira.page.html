@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/cursos"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Culinária Brasileira</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+   <ion-chip class="chip1" (click)="abrirPagina('feijoada')">
+      <ion-avatar class="avatar1">
+       
+        </ion-avatar>
+      <ion-label>Geral</ion-label>
+    </ion-chip> 
+    </ion-list>
+    
+   <ion-list>
+    <ion-chip (click)="abrirPagina('feijoada')">
+      <ion-avatar>
+       <ion-icon class="icon-cafe" name="cafe-outline"></ion-icon>
+      </ion-avatar>
+      <ion-label>Café da manhã</ion-label>
+    </ion-chip> 
+    </ion-list>
+
+    <ion-list>
+    <ion-chip (click)="abrirPagina('feijoada')">
+      <ion-avatar>
+        <ion-icon class="icon-almoco" name="fast-food-outline"></ion-icon>
+      </ion-avatar>
+      <ion-label>Almoço</ion-label>
+    </ion-chip> 
+    </ion-list>
+
