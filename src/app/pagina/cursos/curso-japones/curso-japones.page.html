@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/cursos"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cursos de Comida Japonesa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item button (click)="openCuisine('temaki')">
+      <ion-label>Como fazer um Temaki?</ion-label>
+    </ion-item>
+    <ion-item button (click)="openCuisine('sashimi')">
+      <ion-label>Como cortar Sashimi?</ion-label>
+    </ion-item>
+    <ion-item button (click)="openCuisine('hot')">
+      <ion-label>Como fazer sushi Hot Philadelphia?</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
