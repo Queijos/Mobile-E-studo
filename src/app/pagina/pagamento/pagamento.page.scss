@@ -1,0 +1,45 @@
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; 
+    margin-bottom: 15px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  ion-item {
+    --border-color: #ccc;
+    --highlight-background: #333; 
+    color: #fff; 
+  }
+  
+  ion-label {
+    color: #fff; 
+  }
+  
+  ion-select {
+    color: #fff; 
+  }
+  
+  ion-select-option {
+    color: #000; 
+  }
+  
+  ion-input {
+    color: #fff; 
+  }
+  
+  ion-button {
+    margin-top: 20px;
+    --background: #4CAF50; 
+  }

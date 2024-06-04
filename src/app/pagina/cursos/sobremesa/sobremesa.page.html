@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="tab-top" color="danger">
+    <ion-title class="title">SOBREMESA</ion-title>
+  </ion-toolbar>
+
+  <ion-list class="img-container">
+    <ion-item class="item1" (click)="abrirPagina('cookies')">
+        <ion-avatar>
+          <ion-img class="imgbrasileira" src="/assets/cookies.jpg"></ion-img>
+          </ion-avatar>
+          <ion-text class="text">Cookie</ion-text>
+      </ion-item>
+
+       <ion-item class="item2" (click)="abrirPagina('brigadeiro')">
+        <ion-avatar>
+          <ion-img class="imgbrasileira" src="/assets/brigadeiro.jpg"></ion-img>
+          </ion-avatar> 
+        <ion-text class="text">Brigadeiro</ion-text> 
+      </ion-item>
+
+      <ion-item  class="item3" (click)="abrirPagina('pudim')"> <ion-avatar><ion-img class="imgbrasileira" src="/assets/pudim.jpg"></ion-img></ion-avatar> 
+        <ion-text class="text">Pudim</ion-text>
+       </ion-item>
+
+  </ion-list>
+      
+        <!--
+      <ion-item class="item3">
+        <ion-label (click)="abrirPagina('/cursos/sobremesa')">Sobremesas
+        </ion-label>
+      </ion-item>
+      -->
+

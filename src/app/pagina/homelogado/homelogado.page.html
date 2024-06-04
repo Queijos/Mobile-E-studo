@@ -1,0 +1,94 @@
+<ion-content>
+  <ion-item class="topo">
+<ion-text class="title"><b>CookingWithLove</b></ion-text>
+    <ion-button color="danger" class="botao-entrar" shape="round" slot="end" (click)="abrirPagina('perfil')">Perfil</ion-button>
+
+  </ion-item>
+
+<ion-item>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="ion-text-center"><b>AprendeAqui</b></ion-card-title>
+        <ion-card-subtitle class="ion-text-center">Sua porta de entrada para o universo da Culinária!</ion-card-subtitle>
+    
+       </ion-card-header>
+        <img alt="Silhouette of mountains" src="https://png.pngtree.com/background/20230517/original/pngtree-person-cooking-at-the-kitchen-counter-picture-image_2625819.jpg" />
+    </ion-card>
+</ion-item>
+<p></p>
+<ion-item>
+  <ion-text class="ion-text-center">
+    Seja bem-vindo ao Foi de comes e bebes, a plataforma onde você aprende a cozinhar!<p></p>
+  </ion-text>
+</ion-item>
+<ion-item>
+  <div class="butao">
+  <ion-avatar>
+    <img (click)="abrirPagina('hot')" alt="Silhouette of mountains" src="https://static.itdg.com.br/images/1200-630/a92eeb4c33ecd055c881dc20c806e625/hot-filadelfia-como-fazer.jpg" />
+  </ion-avatar>
+  <ion-avatar>
+  <img (click)="abrirPagina('sashimi')"alt="Silhouette of mountains" src="https://receitinhas.com.br/wp-content/uploads/2018/12/iStock-623858612-1200x800.jpg" />
+</ion-avatar>
+  <ion-avatar >
+  <img (click)="abrirPagina('temaki')" alt="Silhouette of mountains" src="https://static.itdg.com.br/images/auto-auto/e37b23841dfbf1e65819f1e5076b5fdf/temaki-salmao.jpg"/>
+</ion-avatar>
+<ion-avatar >
+  <img (click)="abrirPagina('temaki')" alt="Silhouette of mountains" src="https://s2-receitas.glbimg.com/YTXTFuRbAtHmHJV0ddq9QJPqYt8=/0x0:1280x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2021/P/T/BRcriaQP6Lfn7NWtestA/pudim-de-leite-receita.jpg"/>
+</ion-avatar>
+<ion-avatar >
+  <img (click)="abrirPagina('temaki')" alt="Silhouette of mountains" src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/bf0b6a9ffe1e83960ebf31ed8af6d05f/Derivates/eabadaf71c49ba2b4c70d7317518fa5225c6bc82.jpg"/>
+</ion-avatar>
+</div>
+</ion-item>
+<ion-card>
+  
+  <ion-card-header>
+    <ion-card-title>Aqui você:</ion-card-title>
+
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img alt="Silhouette of mountains" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGdqn2mbjfjrRkxBUgXqDy7C5FDoYxZIu1SZ1ca0_-Hat24wbKBb_F_GmunP-gjooQaaQ&usqp=CAU" />
+       </ion-avatar>
+        <ion-label> - Encontra diversas Receitas</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-avatar slot="start">
+          <img alt="Silhouette of mountains" src="https://png.pngtree.com/element_our/20190603/ourlarge/pngtree-news-person-reading-newspaper-illustration-image_1428441.jpg" />
+  </ion-avatar>
+        <ion-label> - Passo a Passo simplificado.</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-avatar slot="start">
+          <img alt="Silhouette of mountains" src="https://img.freepik.com/vetores-gratis/colecao-de-elementos-de-design-desenhados-a-mao-para-o-dia-das-panquecas_23-2151142487.jpg?size=338&ext=jpg&ga=GA1.1.2113030492.1716076800&semt=ais_user" />
+</ion-avatar>
+        <ion-label> - Preenche o vazio de sua barriga!</ion-label>
+      </ion-item>
+
+
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+
+
+</ion-content>
+
+
+<ion-tab-bar class="barra-bottom" color="danger" slot="bottom">
+ 
+
+    <ion-tab-button class="barra-botoes" color="primary"(click)="abrirPagina('cursos')"tab="Cursos">
+      <ion-icon class="icon" name="fast-food"></ion-icon>
+        Cursos
+      </ion-tab-button>
+
+    <ion-tab-button class="barra-botoes" color="primary"tab="search">
+      <ion-icon class="icon" name="search"></ion-icon>
+      Pesquisar
+    </ion-tab-button>
+  </ion-tab-bar>
