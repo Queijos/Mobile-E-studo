@@ -1,0 +1,49 @@
+*{
+    font-family: "Abel";
+}
+ion-select{
+ --placeholder-color:#22ff00;
+
+}
+.tab-top{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 50px;
+}
+.title {
+    text-align: center;
+}
+ion-item.title {
+    font-weight: bold;
+    text-align: center;
+  }
+ 
+  ion-avatar {
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+  }
+  .imgbrasileira {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .2s; 
+  }
+  
+  .imgbrasileira:hover {
+    transform: scale(1.1);
+  }
+  .img-container {
+    background-color: rgb(255, 232, 172);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+ion-text {
+    margin-left: 5px;
+   
+}
+
+
+  
