@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface Cliente {
@@ -17,34 +17,32 @@ export interface Cliente {
   providedIn: 'root'
 })
 export class ClienteService {
-  private url = 'http://127.0.0.1/php';
+  private baseUrl = 'http://127.0.0.1/php'; // Base URL da API
 
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Cliente[]> {
-    return this.http.get<Cliente[]>(this.url);
+    return this.http.get<Cliente[]>(`${this.baseUrl}/getAll.php`);
   }
 
-  remove(id: any): Observable<void> {
-    return this.http.delete<void>(`${this.url}/${id}`);
+  getById(id: string): Observable<Cliente> {
+    return this.http.get<Cliente>(`${this.baseUrl}/getById.php?id=${id}`);
   }
 
   create(cliente: Cliente): Observable<Cliente> {
-    return this.http.post<Cliente>(this.url, cliente);
+    return this.http.post<Cliente>(`${this.baseUrl}/cadastro.php`, cliente);
   }
 
   update(cliente: Cliente, id: string): Observable<Cliente> {
-    return this.http.put<Cliente>(`${this.url}/${id}`, cliente);
+    return this.http.put<Cliente>(`${this.baseUrl}/update.php?id=${id}`, cliente);
   }
-  
+
+  remove(id: string): Observable<void> {
+    return this.http.delete<void>(`${this.baseUrl}/delete.php?id=${id}`);
+  }
+
   login(email: string, senha: string): Observable<{ success: boolean, id?: string, nome?: string }> {
     const loginData = { email, senha };
-    return this.http.post<{ success: boolean, id?: string, nome?: string }>(`${this.url}/login.php`, loginData);
-  }
-  
-
-  getById(id: any): Observable<Cliente> {
-    return this.http.get<Cliente>(`${this.url}/${id}`);
+    return this.http.post<{ success: boolean, id?: string, nome?: string }>(`${this.baseUrl}/login.php`, loginData);
   }
 }
-
