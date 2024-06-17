@@ -1,27 +1,26 @@
-
 <ion-content>
   <ion-item class="img-container">
     <ion-avatar class="img-user">
-      <ion-img [src]="cliente?.imagem || '/assets/ratatonho.jpg'"></ion-img>
+      <ion-img src="assets/ratatonho.jpg"></ion-img>
     </ion-avatar> 
   </ion-item>
 
-  <ion-item class="username">Nome: {{ cliente?.nome }}</ion-item>
+  <ion-item class="username">Nome: {{ user?.nome }}</ion-item>
   <ion-item>
-    <ion-label>Email: {{ cliente?.email }}</ion-label>
+    <ion-label>Email: {{ user?.email }}</ion-label>
   </ion-item>
   <ion-item>
-    <ion-label>Telefone: {{ cliente?.telefone }}</ion-label>
+    <ion-label>Telefone: {{ user?.telefone }}</ion-label>
   </ion-item>
   <ion-item>
-    <ion-label>Data de Nascimento: {{ cliente?.data_nasc }}</ion-label>
+    <ion-label>Data de Nascimento: {{ user?.data_nasc }}</ion-label>
   </ion-item>
   <ion-item>
-    <ion-label>Gênero: {{ cliente?.genero }}</ion-label>
+    <ion-label>Gênero: {{ user?.genero }}</ion-label>
   </ion-item>
 
-  <ion-item>
-    <ion-label>Upload Imagem</ion-label>
-    <input type="file" (change)="onFileSelected($event)" />
+
+  <ion-item *ngIf="user">
+    <ion-button expand="block" color="danger" (click)="atualizar(user)">Atualizar Perfil</ion-button>
   </ion-item>
 </ion-content>

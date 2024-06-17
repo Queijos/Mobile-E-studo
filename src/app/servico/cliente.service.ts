@@ -45,4 +45,17 @@ export class ClienteService {
     const loginData = { email, senha };
     return this.http.post<{ success: boolean, id?: string, nome?: string }>(`${this.baseUrl}/login.php`, loginData);
   }
+
+  saveUserData(cliente: Cliente) {
+    localStorage.setItem('loggedUser', JSON.stringify(cliente));
+  }
+
+  getUserData(): Cliente | null {
+    const userData = localStorage.getItem('loggedUser');
+    return userData ? JSON.parse(userData) : null;
+  }
+
+  logout() {
+    localStorage.removeItem('loggedUser');
+  }
 }

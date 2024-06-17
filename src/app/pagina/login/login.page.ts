@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { ClienteService } from 'src/app/servico/cliente.service';
+import { ClienteService, Cliente } from 'src/app/servico/cliente.service';
 
 @Component({
   selector: 'app-login',
@@ -27,8 +27,12 @@ export class LoginPage implements OnInit {
           console.log('Login realizado com sucesso!');
           console.log('ID do usuário:', response.id);
           console.log('Nome do usuário:', response.nome);
-          // Redirecionar para a página 'homelogado' ou fazer qualquer outra ação necessária
-          this.abrirPagina('homelogado');
+
+          // Armazenar os dados do usuário logado em localStorage
+          this.clienteService.getById(response.id!).subscribe(userData => {
+            this.clienteService.saveUserData(userData);
+            this.abrirPagina('homelogado');
+          });
         } else {
           // falha no login, mostrar mensagem de erro
           alert('Email ou senha incorretos. Tente novamente.');

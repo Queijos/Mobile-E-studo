@@ -9,48 +9,32 @@ import { EditarPage } from './editar/editar.page';
   styleUrls: ['./perfil.page.scss'],
 })
 export class PerfilPage implements OnInit {
-  cliente: Cliente | undefined;
+  user: Cliente | null = null;
 
   constructor(private modalCtrl: ModalController, private service: ClienteService) { }
 
   ngOnInit() {
-    // Supondo que você tem uma forma de obter o ID do cliente atual
-    const clienteId = '1'; // Substitua pelo ID real do cliente
-
-    this.service.getById(clienteId).subscribe(response => {
-      this.cliente = response;
-    });
+    // Recuperar os dados do usuário logado
+    this.user = this.service.getUserData();
   }
 
-  atualizar(cliente: Cliente) {
+  atualizar(user: Cliente) {
     this.modalCtrl.create({
       component: EditarPage,
-      componentProps: { cliente }
+      componentProps: { user }
     }).then(modal => {
       modal.present();
       return modal.onDidDismiss();
     }).then(({ data }) => {
       if (data) {
         // Atualizar os dados do cliente após a edição
-        this.service.getById(cliente.id).subscribe(response => {
-          this.cliente = response;
+        this.service.getById(user.id).subscribe(response => {
+          this.user = response;
+          // Atualizar os dados do cliente no armazenamento local
+          this.service.saveUserData(this.user);
         });
       }
     });
   }
 
-  onFileSelected(event: any) {
-    const file: File = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e: any) => {
-        if (this.cliente) {
-          this.cliente.imagem = e.target.result;
-          // Atualize a imagem do cliente no servidor
-          this.service.update(this.cliente, this.cliente.id).subscribe();
-        }
-      };
-      reader.readAsDataURL(file);
-    }
-  }
 }

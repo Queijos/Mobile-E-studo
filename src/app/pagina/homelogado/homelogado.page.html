@@ -1,21 +1,23 @@
 <ion-content>
-  <ion-item class="topo">
-<ion-text class="title"><b>CookingWithLove</b></ion-text>
+
+  <div *ngIf="user"> 
+        <ion-item class="topo">
+        <ion-text class="title"><b>Bem-vindo {{ user.nome }}!</b></ion-text>
+   
     <ion-button color="danger" class="botao-entrar" shape="round" slot="end" (click)="abrirPagina('perfil')">Perfil</ion-button>
-
+    <ion-button color="danger" (click)="logout()">Logout</ion-button>
   </ion-item>
-
+     </div>
 <ion-item>
-
   <ion-card>
     <ion-card-header>
-      <ion-card-title class="ion-text-center"><b>AprendeAqui</b></ion-card-title>
+      <ion-card-title class="ion-text-center"><b>MagicMenu</b></ion-card-title>
         <ion-card-subtitle class="ion-text-center">Sua porta de entrada para o universo da Culinária!</ion-card-subtitle>
-    
-       </ion-card-header>
+       </ion-card-header>   
         <img alt="Silhouette of mountains" src="https://png.pngtree.com/background/20230517/original/pngtree-person-cooking-at-the-kitchen-counter-picture-image_2625819.jpg" />
     </ion-card>
 </ion-item>
+
 <p></p>
 <ion-item>
   <ion-text class="ion-text-center">
@@ -86,9 +88,4 @@
       <ion-icon class="icon" name="fast-food"></ion-icon>
         Cursos
       </ion-tab-button>
-
-    <ion-tab-button class="barra-botoes" color="primary"tab="search">
-      <ion-icon class="icon" name="search"></ion-icon>
-      Pesquisar
-    </ion-tab-button>
   </ion-tab-bar>
