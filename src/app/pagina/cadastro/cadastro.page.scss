@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Abel";
+    box-sizing: border-box;
+}
+.text{
+    font-size: 25px;
+    margin-top: 30px;
+    margin: 20px;
+    margin-bottom: 30px;
+}
+ion-menu-button{
+    margin-right:290px;
+}
+.input-nome ion-input {
+    width: 100%;
+    border-radius: 20px;
+    border:1px solid white;
+    margin-bottom: 30px;
+}
+.input-email ion-input{
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid white;
+    margin-bottom: 30px;
+}
+.input-telefone ion-input{
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid white;
+    margin-bottom: 30px;
+}
+.input-data-nascimento ion-input{
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid white;
+    margin-bottom: 30px;
+}
+.input-genero {
+    width: 91%;
+    height: 54px;
+    border-radius: 20px;
+    border: 1px solid white;
+    margin-bottom: 30px;
+    margin-left: 18px;
+
+}
+.input-genero ion-select{
+    left: 80px;
+}
+
+.input-senha ion-input{
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid white;
+    margin-bottom: 30px;
+    
+}
+.button-cad{
+    text-align: center;
+    border: 1px solid white;
+    width: 130px;
+    margin-top: 10px;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.button-entrar{
+    margin:10px;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button-entrar p{
+    margin-left: 70px;
+
+}

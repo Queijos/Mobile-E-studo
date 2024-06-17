@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-button slot="end" (click)="fecharModal()">Fechar</ion-button>
+    <ion-title>Perfil do Usuário</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-item>
+ <ion-text class="username">Ratatonho</ion-text> 
+<ion-avatar class="icone" slot="start"><ion-img src="/assets/ratatonho.jpg"></ion-img></ion-avatar>
+</ion-item>
+
+  <ion-list>
+ 
+    <div class="emails">
+      <ion-item>
+        <ion-text>Email:</ion-text>
+      </ion-item>
+    </div>
+    
+  <div class="telef">
+          <ion-item>
+            <ion-input label="Telefone:" type="telefone"></ion-input>
+          </ion-item>
+  </div>
+  <div class="data_nasc">
+          <ion-item>
+            <ion-input label="Data de nascimento:" type="nascimento" placeholder="00/00/0000"></ion-input>
+          </ion-item>
+  </div>
+  <div class="gender">
+          <ion-item>
+          <ion-label>Gênero</ion-label>
+          <ion-select>
+            <ion-select-option>Masculino</ion-select-option>
+            <ion-select-option>Feminino</ion-select-option>
+          </ion-select>
+          </ion-item>
+  </div>
+        </ion-list>
+
+        <ion-item>
+          <ion-button type="submit">Salvar</ion-button>
+        </ion-item>
