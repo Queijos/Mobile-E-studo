@@ -28,7 +28,6 @@ export class ClienteService {
   getById(id: string): Observable<Cliente> {
     return this.http.get<Cliente>(`${this.baseUrl}/getById.php?id=${id}`);
   }
-
   create(cliente: Cliente): Observable<Cliente> {
     return this.http.post<Cliente>(`${this.baseUrl}/cadastro.php`, cliente);
   }

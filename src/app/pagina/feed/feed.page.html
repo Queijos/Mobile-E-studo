@@ -1,13 +1,13 @@
 <ion-header [translucent]="true">
   <ion-item class="topo">
     <ion-text class="title">Olá!<br>
-      <b>Pessoa</b>
+      <b>{{ user?.nome }}</b>  <!-- Exibe o nome do usuário logado -->
     </ion-text>
     <ion-avatar (click)="abrirPagina('perfil')" class="img-user">
-      <ion-img src="/assets/ratatonho.jpg"></ion-img>
+      <ion-img [src]="user?.imagem"></ion-img>  <!-- Exibe a imagem do usuário logado -->
     </ion-avatar> 
   </ion-item>
-</ion-header> 
+</ion-header>
 
 <ion-content>
   <ion-header class="search-filter">
@@ -52,11 +52,12 @@
     </ng-template>
   </ion-modal>
 
-  <ion-card *ngFor="let receita of receitas" (click)="abrirPagina('/detalhes/' + receita.receitaid)">
-    <img [src]="receita.imagem" />
+  <ion-card *ngFor="let receita of receitas" (click)="abrirDetalhes(receita.receitaid)">
+    <ion-img [src]="receita.imagem"></ion-img>  <!-- Exibe a imagem da receita -->
     <ion-card-header>
       <ion-card-title>{{ receita.titulo }}</ion-card-title>
-      <ion-card-subtitle>Postado por: Pessoa</ion-card-subtitle>
+      <ion-item>{{ receita.descricao }}</ion-item>
+      <ion-card-subtitle>Postado por: {{ receita.usuario_nome }}</ion-card-subtitle>  <!-- Exibe o nome do usuário -->
     </ion-card-header>
   </ion-card>
 </ion-content>

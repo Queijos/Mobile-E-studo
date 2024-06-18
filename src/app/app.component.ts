@@ -9,11 +9,12 @@ import { ClienteService, Cliente } from 'src/app/servico/cliente.service';
 export class AppComponent implements OnInit {
   public appPages = [
     { title: 'Home', url: '/home', icon: 'home' },
+    { title: 'Logado', url: '/homelogado', icon: 'home' },
     { title: 'Login', url: '/login', icon: 'people-circle' },
     { title: 'Cadastrar', url: '/cadastro', icon: 'people' },
     { title: 'Receitas', url: '/cursos', icon: 'fast-food' },
     { title: 'Perfil', url: '/perfil', icon: 'people' },
-    { title: 'Feed de Receitas', url: '/feed', icon: ''}
+    { title: 'Feed de Receitas', url: '/feed', icon: 'fast-food'}
   ];
 
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
