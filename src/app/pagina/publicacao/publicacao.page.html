@@ -1,25 +1,33 @@
+<ion-header collapse="condense">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="abrirPagina('feed')">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="title" size="">Publique sua Receita</ion-title>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-icon (click)="abrirPagina('feed')" class="icon-back" name="arrow-back-outline"></ion-icon>
-      <ion-title class="title" size="">Publique sua Receita</ion-title>
-    </ion-toolbar>
-  </ion-header> 
-
   <ion-list class="container">
-    <ion-item class="input-title">
-    <ion-input placeholder="Título"> </ion-input>
-    </ion-item>
+    <form (submit)="criarReceita()">
+      <ion-item class="input-title">
+        <ion-label position="stacked">Título</ion-label>
+        <ion-input placeholder="Título" name="titulo" [(ngModel)]="receita.titulo" required></ion-input>
+      </ion-item>
 
-    <ion-item class="input-descricao">
-      <textarea placeholder="Insira a receita"></textarea>
-    </ion-item>
+      <ion-item class="input-descricao">
+        <ion-label position="stacked">Descrição</ion-label>
+        <ion-textarea placeholder="Insira a receita" name="descricao" [(ngModel)]="receita.descricao" required></ion-textarea>
+      </ion-item>
 
-    <ion-list class="input-file-img">
-      <ion-label>Escolha uma imagem</ion-label>
-      <ion-input type="file" ></ion-input>
-    </ion-list>
- </ion-list>
+      <ion-item class="input-file-img">
+        <ion-label>Escolha uma imagem</ion-label>
+        <input type="file" (change)="onFileChange($event)" accept="image/*" required>
+      </ion-item>
 
+      <ion-button type="submit" expand="block">Publicar</ion-button>
+    </form>
+  </ion-list>
 </ion-content>
