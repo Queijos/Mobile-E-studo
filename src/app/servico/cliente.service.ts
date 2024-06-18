@@ -62,6 +62,6 @@ export class ClienteService {
   uploadImage(fileToUpload: File, id: string): Observable<any> {
     const formData: FormData = new FormData();
     formData.append('file', fileToUpload, fileToUpload.name);
-    return this.http.post(`${this.baseUrl}/uploadImagem.php?id=${id}`, formData);
+    return this.http.post(`${this.baseUrl}/uploadImage.php?id=${id}`, formData);
   }
 }
