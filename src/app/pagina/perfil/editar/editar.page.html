@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="end" (click)="fecharModal()">Fechar</ion-button>
+    <ion-title>Perfil do Usuário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="cliente">
+  <ion-item>
+    <ion-avatar slot="start">
+      <ion-img [src]="cliente.imagem"></ion-img>
+    </ion-avatar>
+    <ion-text class="username">{{ cliente.nome }}</ion-text>
+  </ion-item>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nome:</ion-label>
+      <ion-input [(ngModel)]="cliente.nome" name="nome" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email:</ion-label>
+      <ion-input [(ngModel)]="cliente.email" name="email" type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Telefone:</ion-label>
+      <ion-input [(ngModel)]="cliente.telefone" name="telefone" type="tel"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Data de nascimento:</ion-label>
+      <ion-input [(ngModel)]="cliente.data_nasc" name="dataNascimento" type="date"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Gênero</ion-label>
+      <ion-select [(ngModel)]="cliente.genero" name="genero">
+        <ion-select-option value="Masculino">Masculino</ion-select-option>
+        <ion-select-option value="Feminino">Feminino</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-button (click)="salvarAlteracoes()">Salvar</ion-button>
+  </ion-item>
+</ion-content>
+
+<ion-content *ngIf="!cliente">
+  <p>Carregando informações do cliente...</p>
+</ion-content>

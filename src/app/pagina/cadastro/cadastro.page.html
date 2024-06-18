@@ -1,0 +1,52 @@
+<ion-content>
+<ion-item>
+    <ion-avatar class="logo"><img class="logo" src="\assets\logo.png"></ion-avatar>
+    <p>MAGIC MENU</p></ion-item>
+  <form #f="ngForm" (ngSubmit)="enviando(f)">
+    <ion-item>
+      <ion-text class="text">Cadastre-se</ion-text>
+    </ion-item>
+
+    <ion-list class="lista">
+
+      <ion-item class="input-nome">
+        <ion-input ngModel name="nome" label="Nome" label-placement="floating" fill="outline" placeholder="Insira seu nome" required></ion-input>
+      </ion-item>
+
+      <ion-item class="input-email">
+        <ion-input ngModel name="email" label="E-mail" label-placement="floating" fill="outline" placeholder="Insira seu e-mail" required></ion-input>
+      </ion-item>
+
+      <ion-item class="input-telefone">
+        <ion-input ngModel name="telefone" label="Telefone/Celular" type="number" label-placement="floating" fill="outline" placeholder="Insira um Telefone/Celular" required></ion-input>
+      </ion-item>
+
+      <ion-item class="input-data-nascimento">
+        <ion-input ngModel name="data_nasc" type="date" label="Data de nascimento" label-placement="floating" fill="outline" placeholder="" required></ion-input>
+      </ion-item>
+
+      <ion-item class="input-genero">
+        <ion-label>Genero</ion-label>
+        <ion-select ngModel name="genero" label-placement="floating" fill="outline" required>
+          <ion-select-option value="Masculino">Masculino</ion-select-option>
+          <ion-select-option value="Feminino">Feminino</ion-select-option>
+          <ion-select-option value="Outro">Outro</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item class="input-senha">
+        <ion-input ngModel name="senha" label="Senha" type="password" label-placement="floating" fill="outline" placeholder="Insira sua senha" required></ion-input>
+      </ion-item>
+
+      <ion-item class="button-cad">
+        <ion-button size="default" expand="" fill="" id="present-alert" type="submit">Cadastrar</ion-button>
+      </ion-item>
+
+      <ion-item class="button-entrar">
+        <p>Já possui uma conta? </p>
+        <ion-button size="default" expand="block" fill="" (click)="abrirPagina('login')">Entrar</ion-button>
+      </ion-item>
+      
+    </ion-list>
+  </form>
+</ion-content>
