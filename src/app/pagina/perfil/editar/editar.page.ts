@@ -1,7 +1,7 @@
+// editar.page.ts
 import { Component, Input, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { ModalController, NavController } from '@ionic/angular';
-import { Cliente, ClienteService } from 'src/app/servico/cliente.service';
+import { ModalController } from '@ionic/angular';
+import { Cliente } from 'src/app/servico/cliente.service';
 
 @Component({
   selector: 'app-editar',
@@ -9,30 +9,18 @@ import { Cliente, ClienteService } from 'src/app/servico/cliente.service';
   styleUrls: ['./editar.page.scss'],
 })
 export class EditarPage implements OnInit {
-@Input() c!: Cliente;
-atualizar = false;
-dados = {
-  nome: '',
-  telefone: ''
-}
-  constructor(public nav: NavController, private modalCtrl: ModalController,private service: ClienteService) { }
-  abrirPagina(x: any){
-    this.nav.navigateForward(x);
-  }
-  ngOnInit() { 
-     if(this.c){
-     // console.log("Atualizar");
-     this.atualizar = true;
-     this.dados = this.c;
-    }else{
-      console.log("Novo Cliente")
-    }
-    }
-  
-     fecharModal(){
+  @Input() cliente: Cliente | undefined;
+
+  constructor(private modalCtrl: ModalController) { }
+
+  ngOnInit() {}
+
+  fecharModal() {
     this.modalCtrl.dismiss();
   }
-}
-  
- 
 
+  salvarAlteracoes() {
+    // Lógica para salvar as alterações no cliente
+    this.modalCtrl.dismiss({ data: true });
+  }
+}

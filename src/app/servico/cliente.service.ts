@@ -33,8 +33,8 @@ export class ClienteService {
     return this.http.post<Cliente>(`${this.baseUrl}/cadastro.php`, cliente);
   }
 
-  update(cliente: Cliente, id: string): Observable<Cliente> {
-    return this.http.put<Cliente>(`${this.baseUrl}/update.php?id=${id}`, cliente);
+  update(cliente: Cliente): Observable<Cliente> {
+    return this.http.put<Cliente>(`${this.baseUrl}/update.php?id=${cliente.id}`, cliente);
   }
 
   remove(id: string): Observable<void> {
@@ -57,5 +57,11 @@ export class ClienteService {
 
   logout() {
     localStorage.removeItem('loggedUser');
+  }
+
+  uploadImage(fileToUpload: File, id: string): Observable<any> {
+    const formData: FormData = new FormData();
+    formData.append('file', fileToUpload, fileToUpload.name);
+    return this.http.post(`${this.baseUrl}/uploadImage.php?id=${id}`, formData);
   }
 }

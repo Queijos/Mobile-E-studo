@@ -25,4 +25,3 @@ export class HomelogadoPage implements OnInit {
     this.abrirPagina('login');
   }
 }
-
