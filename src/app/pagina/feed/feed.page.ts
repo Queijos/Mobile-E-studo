@@ -20,6 +20,7 @@ export class FeedPage implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.loadUserData();
     this.user = this.clienteService.getUserData();
     this.carregarReceitas();
   }
