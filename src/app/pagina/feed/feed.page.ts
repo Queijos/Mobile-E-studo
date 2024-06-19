@@ -34,6 +34,7 @@ export class FeedPage implements OnInit {
       }
     );
   }
+  
 
   abrirPagina(x: any) {
     this.nav.navigateForward(x);
@@ -49,8 +50,8 @@ export class FeedPage implements OnInit {
       (response) => {
         if (response.success) {
           console.log('Receita criada com sucesso!');
-          // Recarrega as receitas após a criação
-          this.carregarReceitas();
+          // Recarrega a página após a criação
+          window.location.reload();
         } else {
           console.error('Erro ao criar a receita:', response.message);
         }
@@ -60,5 +61,13 @@ export class FeedPage implements OnInit {
       }
     );
   }
+
+  getImageUrl(imagePath: string | undefined): string {
+    if (!imagePath) {
+      return 'http://127.0.0.1/php/uploads/default.jpg'; // Ou outra URL padrão
+    }
+    return `http://127.0.0.1/php/${imagePath}`;
+  }
   
 }
+

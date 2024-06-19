@@ -53,11 +53,11 @@
   </ion-modal>
 
   <ion-card *ngFor="let receita of receitas" (click)="abrirDetalhes(receita.receitaid)">
-    <ion-img [src]="receita.imagem"></ion-img>  <!-- Exibe a imagem da receita -->
     <ion-card-header>
-      <ion-card-title>{{ receita.titulo }}</ion-card-title>
+      <ion-card-title>{{ receita.titulo }}</ion-card-title> 
+      <ion-img [src]="getImageUrl(receita.imagem)"></ion-img>
       <ion-item>{{ receita.descricao }}</ion-item>
-      <ion-card-subtitle>Postado por: {{ receita.usuario_nome }}</ion-card-subtitle>  <!-- Exibe o nome do usuário -->
+      <ion-card-subtitle>Postado por: {{ receita.usuario_nome }}</ion-card-subtitle>
     </ion-card-header>
   </ion-card>
 </ion-content>

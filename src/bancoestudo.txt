@@ -13,3 +13,11 @@ CREATE TABLE cliente (
     UNIQUE (email),
     UNIQUE (telefone)
 );
+CREATE TABLE receitas (
+    receitaid INT AUTO_INCREMENT PRIMARY KEY, 
+    usuario_id INT, 
+    titulo VARCHAR(255),
+    descricao TEXT, 
+    imagem VARCHAR(255), 
+    FOREIGN KEY (usuario_id) REFERENCES cliente(id) ON DELETE CASCADE 
+    );
