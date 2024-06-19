@@ -1,0 +1,61 @@
+* {
+  font-family: "Abel";
+}
+
+ion-select {
+  --placeholder-color: #22ff00;
+}
+
+.tab-top {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 50px;
+}
+
+.title {
+  text-align: center;
+}
+
+ion-item.title {
+  font-weight: bold;
+  text-align: center;
+}
+
+ion-avatar {
+  border: 1px solid white;
+  border-radius: 50%; 
+}
+
+.imgbrasileira,
+.imgjaponesa,
+.imgitaliana,
+.imgmexicana,
+.imgchinesa,
+.imgindiana,
+.imgarabe {
+  transition: transform 0.2s;
+}
+
+.imgbrasileira:hover,
+.imgjaponesa:hover,
+.imgitaliana:hover,
+.imgmexicana:hover,
+.imgchinesa:hover,
+.imgindiana:hover,
+.imgarabe:hover {
+  transform: scale(1.1);
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10; 
+  margin-right: 10; 
+}
+
+ion-text {
+  margin-left: 5px;
+}
+
+

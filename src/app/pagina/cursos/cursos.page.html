@@ -1,0 +1,179 @@
+<ion-header>
+  <ion-toolbar color="danger" class="tab-top">
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-title class="title">Culinárias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item class="title">Comidas Brasileira</ion-item>
+  <div class="img-container">
+    <ion-item (click)="abrirPagina('feijoada')">
+      <ion-avatar>
+        <ion-img class="imgbrasileira" src="/assets/feijoada-1.jpg"></ion-img>
+      </ion-avatar>
+      <p><ion-text class="text">Feijoada</ion-text></p>
+    </ion-item>
+    <ion-item (click)="abrirPagina('strogonoff')">
+      <ion-avatar>
+        <ion-img class="imgbrasileira" src="/assets/strogonoff.jpg"></ion-img>
+      </ion-avatar>
+      <ion-text class="text">Strogonoff</ion-text>
+    </ion-item>
+    <ion-item (click)="abrirPagina('tropeiro')">
+      <ion-avatar>
+        <ion-img class="imgbrasileira" src="/assets/feijão-tropeiro.jpg"></ion-img>
+      </ion-avatar>
+      <ion-text class="text">Tropeiro</ion-text>
+    </ion-item>
+  </div>
+
+  <ion-item class="title">Comidas Japonesa</ion-item>
+  <div class="img-container">
+    <ion-item (click)="abrirPagina('sashimi')">
+      <ion-avatar>
+        <ion-img class="imgjaponesa" src="https://receitinhas.com.br/wp-content/uploads/2018/12/iStock-623858612-1200x800.jpg"></ion-img>
+      </ion-avatar>
+      <p><ion-text class="text">Sashimi</ion-text></p>
+    </ion-item>
+    <ion-item (click)="abrirPagina('temaki')">
+      <ion-avatar>
+        <ion-img class="imgjaponesa" src="https://static.itdg.com.br/images/auto-auto/e37b23841dfbf1e65819f1e5076b5fdf/temaki-salmao.jpg"></ion-img>
+      </ion-avatar>
+      <ion-text class="text">Temaki</ion-text>
+    </ion-item>
+    <ion-item (click)="abrirPagina('hot')">
+      <ion-avatar>
+        <ion-img class="imgjaponesa" src="https://static.itdg.com.br/images/1200-630/a92eeb4c33ecd055c881dc20c806e625/hot-filadelfia-como-fazer.jpg"></ion-img>
+      </ion-avatar>
+      <ion-text class="text">Hot</ion-text>
+    </ion-item>
+  </div>
+
+  <ion-item class="title">Comidas Italiana</ion-item>
+  <div class="img-container">
+    <ion-item>
+      <ion-avatar>
+        <ion-img class="imgitaliana" src="https://static.itdg.com.br/images/360-240/ec2a5e38702c60bf1ace0b5f1c8e9415/shutterstock-739787011.jpg"></ion-img>
+      </ion-avatar>
+      <ion-text class="text">Lasanha</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-avatar>
+        <ion-img class="imgitaliana" src="https://www.minhareceita.com.br/app/uploads/2022/12/pizza-de-pepperoni-caseira-portal-minha-receita.jpg"></ion-img>
+      </ion-avatar>
+      <ion-text class="text">Pizza</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-avatar>
+        <ion-img class="imgitaliana" src="https://www.allrecipes.com/thmb/ZhDrBmciWzegNpBWB-5LXEvULao=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Easyspaghettiwithtomatosauce_11715_DDMFS_4x3_2424-8d7bf30b2622465f9dd78a2c6277eeb8.jpg"></ion-img>
+      </ion-avatar>
+      <ion-text class="text">Spaghetti</ion-text>
+    </ion-item>
+  </div>
+
+  <ion-item class="title">Comidas Mexicana</ion-item>
+  <div class="img-container">
+    <ion-item>
+      <ion-avatar>
+        <ion-img class="imgmexicana" src="https://receitasdeaz.com.br/wp-content/uploads/2024/02/tacos-mexicanos-tradicional.webp"></ion-img>
+      </ion-avatar>
+      <ion-text class="text">Tacos</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-avatar>
+        <ion-img class="imgmexicana" src="https://i.panelinha.com.br/i1/228-q-6619-guacamole.webp"></ion-img>
+      </ion-avatar>
+      <ion-text class="text">Guacamole</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-avatar>
+        <ion-img class="imgmexicana" src="https://media.istockphoto.com/id/1313361282/pt/foto/mexican-rice-and-chorizo-sausage-wrap.jpg?s=612x612&w=0&k=20&c=IXJ9492w0NvJfacY2lSszqyWN8GJizBtAUV9HQIdw5Y="></ion-img>
+      </ion-avatar>
+      <ion-text class="text">Burrito</ion-text>
+    </ion-item>
+  </div>
+
+  <ion-item class="title">Comidas Chinesa</ion-item>
+  <div class="img-container">
+    <ion-item>
+      <ion-avatar>
+        <ion-img class="imgchinesa" src="https://www.thespruceeats.com/thmb/LAD6HCmf0MFSpV3JDJgM9n7REos=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/SES-thai-fresh-rolls-with-vegetarian-option-3217706-hero-A-3bdb04a8ee2444a2ab6873810a334642.jpg"></ion-img>
+      </ion-avatar>
+      <ion-text class="text">Rolinhos primavera</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-avatar>
+        <ion-img class="imgchinesa" src="https://cdn.levty.com/camil/prd/imagem/arroz_frito_a_moda_chinesa_1415/arroz_frito_a_moda_chinesa_1415.jpg"></ion-img>
+      </ion-avatar>
+      <ion-text class="text">Arroz Frito</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-avatar>
+        <ion-img class="imgchinesa" src="https://media.istockphoto.com/id/1372924245/pt/foto/fried-dumplings-with-pork-and-herbs-in-a-black-round-bowl-and-flying-in-the-air.jpg?s=612x612&w=0&k=20&c=7Nff91T6MZQ2QTxQDjGqY6bekilGEbWhMgpYBnnsMVU="></ion-img>
+      </ion-avatar>
+      <ion-text class="text">Bolinho Cozido</ion-text>
+    </ion-item>
+  </div>
+
+  <ion-item class="title">Comidas Indiana</ion-item>
+  <div class="img-container">
+    <ion-item>
+      <ion-avatar>
+        <ion-img class="imgindiana" src="https://storage.googleapis.com/imagens_videos_gou_cooking_prod/production/mesas/2021/03/a1509c02-curry-indiano-de-frango-e-vegetais-_-tm-clinicas-einstein_-alimentacao-saude-intestinal-_-breno-reis-_-baixa-9.jpg"></ion-img>
+      </ion-avatar>
+      <ion-text class="text">Curry</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-avatar>
+        <ion-img class="imgindiana" src="https://static.itdg.com.br/images/auto-auto/afda4357902ed05ee1997d5c887a1813/naan.jpg"></ion-img>
+      </ion-avatar>
+      <ion-text class="text">Naan</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-avatar>
+        <ion-img class="imgindiana" src="https://www.guiadasemana.com.br/contentFiles/image/opt_w1280h960/2019/09/FEA/64245_shutterstock-717085027.jpg"></ion-img>
+      </ion-avatar>
+      <ion-text class="text">Samosa</ion-text>
+    </ion-item>
+  </div>
+
+  <ion-item class="title">Comidas Árabe</ion-item>
+  <div class="img-container">
+    <ion-item>
+      <ion-avatar>
+        <ion-img class="imgarabe" src="https://png.pngtree.com/thumb_back/fw800/background/20240204/pngtree-creamy-hummus-with-spicy-mutton-minced-meat-on-a-wooden-background-image_15591511.png"></ion-img>
+      </ion-avatar>
+      <ion-text class="text">Hummus</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-avatar>
+        <ion-img class="imgarabe" src="https://img.freepik.com/fotos-premium/indianstyle-seekh-kebab-comida-indiana-foto_960396-339.jpg"></ion-img>
+      </ion-avatar>
+      <ion-text class="text">Kebab</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-avatar>
+        <ion-img class="imgarabe" src="https://img.freepik.com/fotos-premium/uma-tigela-de-falafel-com-molho-de-tomate-e-salsa-ao-lado_894903-1703.jpg"></ion-img>
+      </ion-avatar>
+      <ion-text class="text">Falafel</ion-text>
+    </ion-item>
+  </div>
+
+  <ion-item class="title">Comidas Francesa</ion-item>
+  <div class="img-container">
+    <ion-item>
+      <ion-avatar><ion-img class="imgfrancesa" src="https://img.freepik.com/fotos-premium/foto-de-coq-au-vin_871710-27019.jpg"></ion-img></ion-avatar>
+      <ion-text class="text">Coq au Vin</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-avatar><ion-img class="imgfrancesa" src="https://receidelicia.com.br/wp-content/uploads/2021/02/Ratatouille-1000x850-1.jpg"></ion-img></ion-avatar>
+      <ion-text class="text">Ratatouille</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-avatar><ion-img class="imgfrancesa" src="https://f.i.uol.com.br/folha/comida/images/12024563.jpeg"></ion-img></ion-avatar>
+      <ion-text class="text">Crème Brûlée</ion-text>
+    </ion-item>
+  </div>
+</ion-content>

@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-item class="topo">
+    <ion-text class="title">Olá!<br>
+      <b>{{ user?.nome }}</b>  <!-- Exibe o nome do usuário logado -->
+    </ion-text>
+    <ion-avatar (click)="abrirPagina('perfil')" class="img-user">
+      <ion-img [src]="getImageUrlForPerfil(cliente?.imagem)"></ion-img>  <!-- Exibe a imagem do usuário logado -->
+    </ion-avatar> 
+  </ion-item>
+</ion-header>
+
+<ion-content>
+  <ion-header class="search-filter">
+    <ion-toolbar class="toolbar1"> 
+      <ion-searchbar class="busca" placeholder="Busque receitas"></ion-searchbar>
+      <ion-icon class="button-filter" id="open-custom-dialog" name="filter-outline"></ion-icon>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-item class="pub" (click)="abrirPagina('publicacao')">
+    Publique sua receita <ion-icon name="paper-plane-outline"></ion-icon>
+  </ion-item>
+  
+  <ion-modal id="example-modal" #modal trigger="open-custom-dialog">
+    <ng-template>
+      <div class="wrapper">
+        <h1 class="h1categoria">
+          <ion-icon class="icon-back" (click)="modal.dismiss()" name="arrow-back-outline"></ion-icon> 
+          Categorias
+        </h1>
+        <ion-list lines="none">
+          <ion-item button="true" detail="false" (click)="modal.dismiss()">
+            <ion-label>Geral</ion-label>
+          </ion-item>
+          <ion-item button="true" detail="false" (click)="modal.dismiss()">
+            <ion-label>Café da manhã</ion-label>
+          </ion-item>
+          <ion-item button="true" detail="false" (click)="modal.dismiss()">
+            <ion-label>Refeição</ion-label>
+          </ion-item>
+          <ion-item button="true" detail="false" (click)="abrirPagina('/sobremesa')" (click)="modal.dismiss()">
+            <ion-label>Sobremesa</ion-label>
+          </ion-item>
+          <ion-item button="true" detail="false" (click)="abrirPagina('/curso-brasileira')" (click)="modal.dismiss()">
+            <ion-label>Comida Brasileira</ion-label>
+          </ion-item> 
+          <ion-item button="true" detail="false" (click)="abrirPagina('/curso-japones')" (click)="modal.dismiss()">
+            <ion-label>Comida Japonesa</ion-label>
+          </ion-item> 
+        </ion-list>
+      </div>
+    </ng-template>
+  </ion-modal>
+
+  <ion-card *ngFor="let receita of receitas" (click)="abrirDetalhes(receita.receitaid)">
+    <ion-card-header>
+      <ion-card-title>{{ receita.titulo }}</ion-card-title> 
+      <ion-img [src]="getImageUrl(receita.imagem)"></ion-img>
+      <ion-item>{{ receita.descricao }}</ion-item>
+      <ion-card-subtitle>Postado por: {{ receita.usuario_nome }}</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

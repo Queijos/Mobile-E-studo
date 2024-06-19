@@ -1,0 +1,25 @@
+<ion-content>   
+  <ion-item><ion-avatar class="logo"><img class="logo" src="\assets\logo.png"></ion-avatar>
+      <p>MAGIC MENU</p></ion-item>
+  <ion-item>
+    <ion-text class="text">Seja Bem vindo!</ion-text>
+  </ion-item>
+  <form #loginForm="ngForm" (ngSubmit)="login()">
+    <ion-item class="input-email">
+      <ion-input label="E-mail" type="text" [(ngModel)]="email" name="email" label-placement="floating" fill="outline" placeholder="Insira seu e-mail"></ion-input>
+    </ion-item>
+    
+    <ion-item class="input-senha">
+      <ion-input label="Senha" [(ngModel)]="senha" name="senha" type="password" label-placement="floating" fill="outline" placeholder="Insira sua senha"></ion-input>
+    </ion-item>
+
+    <ion-item class="button-entrar">
+      <ion-button size="default" expand="" fill="" id="present-alert" type="submit">Entrar</ion-button>
+    </ion-item>
+    
+    <ion-item class="button-criar">
+      <p>Não possui uma conta?</p>
+      <ion-button size="default" expand="block" fill="" (click)="abrirPagina('cadastro')">Criar Conta</ion-button>
+    </ion-item>
+  </form>
+</ion-content>

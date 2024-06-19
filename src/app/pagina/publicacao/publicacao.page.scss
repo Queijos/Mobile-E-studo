@@ -1,0 +1,36 @@
+*{
+    font-family: "Abel";   
+    margin: 10px;
+    margin-left: 0;
+}
+.icon-back{
+    width: 30px;
+    height: 30px;
+}
+.title{
+    font-size: 20px;
+}
+.input-title{
+    text-align: center;
+    font-size: 25px;
+}
+.input-descricao{
+    display: flex;
+    margin-left: 20px;
+
+}
+.input-descricao textarea{
+    height: 300px;
+    width: 100%;
+    font-size: 20px;
+    padding: 5px;
+}
+.input-file-img{
+    width: 70%;
+    padding-left: 30px;
+
+}
+.input-file-img ion-label{
+    font-size: 20px;
+
+}
