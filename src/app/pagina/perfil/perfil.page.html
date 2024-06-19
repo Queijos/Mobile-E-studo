@@ -1,7 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content>
   <ion-item class="img-container">
     <ion-avatar class="img-user">
-      <ion-img src="assets/ratatonho.jpg'"></ion-img>
+      <ion-img [src]="getImageUrlForPerfil(cliente?.imagem)"></ion-img>
     </ion-avatar> 
   </ion-item>
 

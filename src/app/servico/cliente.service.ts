@@ -58,7 +58,6 @@ export class ClienteService {
   logout() {
     localStorage.removeItem('loggedUser');
   }
-
   uploadImage(fileToUpload: File, clienteId: string): Observable<any> {
     const formData: FormData = new FormData();
     formData.append('file', fileToUpload, fileToUpload.name);

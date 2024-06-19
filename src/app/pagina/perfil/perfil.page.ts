@@ -46,4 +46,11 @@ export class PerfilPage implements OnInit {
       });
     }
   }
+
+  getImageUrlForPerfil(imagePath: string | null | undefined): string {
+    if (!imagePath) {
+      return 'assets/ratatonho.jpg'; // Ou outra URL padrão
+    }
+    return `http://127.0.0.1/php/${imagePath}`;
+  }
 }

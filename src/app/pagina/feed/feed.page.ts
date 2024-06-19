@@ -35,7 +35,14 @@ export class FeedPage implements OnInit {
     );
   }
   
-
+  loadUserData() {
+    const userData = this.clienteService.getUserData();
+    if (userData && userData.id) {
+      this.clienteService.getById(userData.id).subscribe(response => {
+        this.cliente = response;
+      });
+    }
+  }
   abrirPagina(x: any) {
     this.nav.navigateForward(x);
   }
@@ -69,5 +76,13 @@ export class FeedPage implements OnInit {
     return `http://127.0.0.1/php/${imagePath}`;
   }
   
+  getImageUrlForPerfil(imagePath: string | null | undefined): string {
+    if (!imagePath) {
+      return 'assets/ratatonho.jpg'; // Ou outra URL padrão
+    }
+    return `http://127.0.0.1/php/${imagePath}`;
+  }
 }
+
+
 

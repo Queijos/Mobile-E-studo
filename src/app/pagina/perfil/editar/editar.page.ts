@@ -64,7 +64,10 @@ export class EditarPage implements OnInit {
       this.clienteService.uploadImage(this.fileToUpload, this.cliente.id).subscribe(
         (response) => {
           if (response && response.success && response.imagem) {
-            this.cliente = { ...this.cliente, imagem: response.imagem } as Cliente;
+            // Atualiza a URL da imagem apenas se cliente está definido
+            if (this.cliente) {
+              this.cliente.imagem = response.imagem;
+            }
           } else {
             console.error('Falha ao fazer upload da imagem:', response);
           }
@@ -78,4 +81,11 @@ export class EditarPage implements OnInit {
     }
   }
 
+  getImageUrlForPerfil(imagePath: string | null | undefined): string {
+    if (!imagePath) {
+      return 'assets/ratatonho.jpg'; // Ou outra URL padrão
+    }
+    return `http://127.0.0.1/php/${imagePath}`;
+  }
 }
+

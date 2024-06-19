@@ -4,7 +4,7 @@
       <b>{{ user?.nome }}</b>  <!-- Exibe o nome do usuário logado -->
     </ion-text>
     <ion-avatar (click)="abrirPagina('perfil')" class="img-user">
-      <ion-img [src]="user?.imagem"></ion-img>  <!-- Exibe a imagem do usuário logado -->
+      <ion-img [src]="getImageUrlForPerfil(cliente?.imagem)"></ion-img>  <!-- Exibe a imagem do usuário logado -->
     </ion-avatar> 
   </ion-item>
 </ion-header>
