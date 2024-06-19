@@ -10,7 +10,7 @@ export interface Cliente {
   data_nasc: string;
   genero: string;
   senha: string;
-  imagem: string;
+  imagem: string | null; // Aceita null para tratar casos sem imagem
 }
 
 @Injectable({
@@ -28,6 +28,7 @@ export class ClienteService {
   getById(id: string): Observable<Cliente> {
     return this.http.get<Cliente>(`${this.baseUrl}/getById.php?id=${id}`);
   }
+
   create(cliente: Cliente): Observable<Cliente> {
     return this.http.post<Cliente>(`${this.baseUrl}/cadastro.php`, cliente);
   }
@@ -58,9 +59,15 @@ export class ClienteService {
     localStorage.removeItem('loggedUser');
   }
 
-  uploadImage(fileToUpload: File, id: string): Observable<any> {
+  uploadImage(fileToUpload: File, clienteId: string): Observable<any> {
     const formData: FormData = new FormData();
     formData.append('file', fileToUpload, fileToUpload.name);
-    return this.http.post(`${this.baseUrl}/uploadImage.php?id=${id}`, formData);
+    formData.append('clienteId', clienteId);
+    return this.http.post(`${this.baseUrl}/uploadImage.php`, formData);
   }
+
+  getImagem(clienteId: string): Observable<string> {
+    return this.http.get<string>(`${this.baseUrl}/getImagem.php?id=${clienteId}`);
+  }
+
 }

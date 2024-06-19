@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-button slot="end" (click)="fecharModal()">Fechar</ion-button>
-    <ion-title>Perfil do Usuário</ion-title>
+    <ion-title>Editar Perfil</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -42,9 +42,14 @@
       </ion-select>
     </ion-item>
   </ion-list>
+  <ion-item>
+    <ion-label>Upload Imagem</ion-label>
+    <input type="file" (change)="onFileChange($event)" accept="image/*">
+    <ion-button (click)="uploadImage()">Salvar Imagem</ion-button>
+  </ion-item>
 
   <ion-item>
-    <ion-button (click)="salvarAlteracoes()">Salvar</ion-button>
+    <ion-button (click)="salvarAlteracoes()">Salvar Alterações</ion-button>
   </ion-item>
 </ion-content>
 

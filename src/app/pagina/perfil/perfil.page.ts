@@ -18,6 +18,10 @@ export class PerfilPage implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.loadUserData();
+  }
+
+  loadUserData() {
     const userData = this.clienteService.getUserData();
     if (userData && userData.id) {
       this.clienteService.getById(userData.id).subscribe(response => {
@@ -25,6 +29,7 @@ export class PerfilPage implements OnInit {
       });
     }
   }
+
   atualizar(cliente: Cliente | null) {
     if (cliente) {
       this.modalCtrl.create({
@@ -36,33 +41,9 @@ export class PerfilPage implements OnInit {
       }).then(({ data }) => {
         if (data) {
           // Atualizar os dados do cliente após a edição
-          this.clienteService.getById(cliente.id).subscribe(response => {
-            this.cliente = response;
-          });
+          this.loadUserData();
         }
       });
-    }
-  }
-
-  onFileSelected(event: any) {
-    const file: File = event.target.files[0];
-    if (file) {
-      this.fileToUpload = file;
-      const reader = new FileReader();
-      reader.onload = (e: any) => {
-        if (this.cliente) {
-          this.cliente.imagem = e.target.result;
-          // Atualize a imagem do cliente no servidor
-          if (this.fileToUpload) {
-            this.clienteService.uploadImage(this.fileToUpload, this.cliente.id).subscribe(() => {
-              console.log('Imagem atualizada com sucesso.');
-            }, error => {
-              console.error('Erro ao atualizar imagem:', error);
-            });
-          }
-        }
-      };
-      reader.readAsDataURL(file);
     }
   }
 }
